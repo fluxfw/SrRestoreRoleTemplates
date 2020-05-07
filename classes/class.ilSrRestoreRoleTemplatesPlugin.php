@@ -16,7 +16,7 @@ class ilSrRestoreRoleTemplatesPlugin extends ilCronHookPlugin
     use PluginUninstallTrait;
     use SrRestoreRoleTemplatesTrait;
 
-    const PLUGIN_ID = "srrestoreroletemplates";
+    const PLUGIN_ID = "srresroltem";
     const PLUGIN_NAME = "SrRestoreRoleTemplates";
     const PLUGIN_CLASS_NAME = self::class;
     /**
