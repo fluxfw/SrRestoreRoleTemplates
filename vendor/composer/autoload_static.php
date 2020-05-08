@@ -9,16 +9,16 @@ class ComposerStaticInit5efeb17eb25d8cb66b013b687eab8b27
     public static $prefixLengthsPsr4 = array (
         's' => 
         array (
-            'srag\\RemovePluginDataConfirm\\' => 29,
+            'srag\\RemovePluginDataConfirm\\SrRestoreRoleTemplates\\' => 52,
             'srag\\Plugins\\SrRestoreRoleTemplates\\' => 36,
             'srag\\LibrariesNamespaceChanger\\' => 31,
-            'srag\\DIC\\' => 9,
-            'srag\\CustomInputGUIs\\' => 21,
+            'srag\\DIC\\SrRestoreRoleTemplates\\' => 32,
+            'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\' => 44,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'srag\\RemovePluginDataConfirm\\' => 
+        'srag\\RemovePluginDataConfirm\\SrRestoreRoleTemplates\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src',
         ),
@@ -30,11 +30,11 @@ class ComposerStaticInit5efeb17eb25d8cb66b013b687eab8b27
         array (
             0 => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src',
         ),
-        'srag\\DIC\\' => 
+        'srag\\DIC\\SrRestoreRoleTemplates\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/dic/src',
         ),
-        'srag\\CustomInputGUIs\\' => 
+        'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/custominputguis/src',
         ),
@@ -143,7 +143,7 @@ class ComposerStaticInit5efeb17eb25d8cb66b013b687eab8b27
         'srag\\LibrariesNamespaceChanger\\PHP7Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/PHP7Backport.php',
         'srag\\LibrariesNamespaceChanger\\RemovePHP72Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/RemovePHP72Backport.php',
         'srag\\Plugins\\SrRestoreRoleTemplates\\Job\\Factory' => __DIR__ . '/../..' . '/src/Job/Factory.php',
-        'srag\\Plugins\\SrRestoreRoleTemplates\\Job\\Job' => __DIR__ . '/../..' . '/src/Job/Job.php',
+        'srag\\Plugins\\SrRestoreRoleTemplates\\Job\\ReapplyRoleTemplatesJob' => __DIR__ . '/../..' . '/src/Job/ReapplyRoleTemplatesJob.php',
         'srag\\Plugins\\SrRestoreRoleTemplates\\Job\\Repository' => __DIR__ . '/../..' . '/src/Job/Repository.php',
         'srag\\Plugins\\SrRestoreRoleTemplates\\Repository' => __DIR__ . '/../..' . '/src/Repository.php',
         'srag\\Plugins\\SrRestoreRoleTemplates\\Utils\\SrRestoreRoleTemplatesTrait' => __DIR__ . '/../..' . '/src/Utils/SrRestoreRoleTemplatesTrait.php',

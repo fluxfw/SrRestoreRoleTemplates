@@ -5,6 +5,8 @@ namespace srag\Plugins\SrRestoreRoleTemplates\Job;
 use ilCronJob;
 use ilSrRestoreRoleTemplatesPlugin;
 use srag\DIC\SrRestoreRoleTemplates\DICTrait;
+use srag\Plugins\SrRestoreRoleTemplates\ReapplyRoleTemplates\ReapplyRoleTemplatesJob;
+use srag\Plugins\SrRestoreRoleTemplates\RestoreDidacticTemplates\RestoreDidacticTemplatesJob;
 use srag\Plugins\SrRestoreRoleTemplates\Utils\SrRestoreRoleTemplatesTrait;
 
 /**
@@ -55,7 +57,8 @@ final class Factory
     public function newInstances() : array
     {
         return [
-            $this->newJobInstance()
+            self::srRestoreRoleTemplates()->reapplyRoleTemplates()->factory()->newJobInstance(),
+            self::srRestoreRoleTemplates()->restoreDidacticTemplates()->factory()->newJobInstance()
         ];
     }
 
@@ -68,22 +71,14 @@ final class Factory
     public function newInstanceById(string $job_id)/*: ?ilCronJob*/
     {
         switch ($job_id) {
-            case Job::CRON_JOB_ID:
-                return $this->newJobInstance();
+            case ReapplyRoleTemplatesJob::CRON_JOB_ID:
+                return self::srRestoreRoleTemplates()->reapplyRoleTemplates()->factory()->newJobInstance();
+
+            case RestoreDidacticTemplatesJob::CRON_JOB_ID:
+                return self::srRestoreRoleTemplates()->restoreDidacticTemplates()->factory()->newJobInstance();
 
             default:
                 return null;
         }
-    }
-
-
-    /**
-     * @return Job
-     */
-    public function newJobInstance() : Job
-    {
-        $job = new Job();
-
-        return $job;
     }
 }

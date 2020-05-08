@@ -108,7 +108,7 @@ return array(
     'srag\\LibrariesNamespaceChanger\\PHP7Backport' => $vendorDir . '/srag/librariesnamespacechanger/src/PHP7Backport.php',
     'srag\\LibrariesNamespaceChanger\\RemovePHP72Backport' => $vendorDir . '/srag/librariesnamespacechanger/src/RemovePHP72Backport.php',
     'srag\\Plugins\\SrRestoreRoleTemplates\\Job\\Factory' => $baseDir . '/src/Job/Factory.php',
-    'srag\\Plugins\\SrRestoreRoleTemplates\\Job\\Job' => $baseDir . '/src/Job/Job.php',
+    'srag\\Plugins\\SrRestoreRoleTemplates\\Job\\ReapplyRoleTemplatesJob' => $baseDir . '/src/Job/ReapplyRoleTemplatesJob.php',
     'srag\\Plugins\\SrRestoreRoleTemplates\\Job\\Repository' => $baseDir . '/src/Job/Repository.php',
     'srag\\Plugins\\SrRestoreRoleTemplates\\Repository' => $baseDir . '/src/Repository.php',
     'srag\\Plugins\\SrRestoreRoleTemplates\\Utils\\SrRestoreRoleTemplatesTrait' => $baseDir . '/src/Utils/SrRestoreRoleTemplatesTrait.php',

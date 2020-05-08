@@ -1,31 +1,29 @@
 <?php
 
-namespace srag\Plugins\SrRestoreRoleTemplates\Job;
+namespace srag\Plugins\SrRestoreRoleTemplates\ReapplyRoleTemplates;
 
 use ilCronJob;
 use ilCronJobResult;
 use ilSrRestoreRoleTemplatesPlugin;
 use srag\DIC\SrRestoreRoleTemplates\DICTrait;
-use srag\Plugins\SrRestoreRoleTemplates\Config\Form\FormBuilder;
-use srag\Plugins\SrRestoreRoleTemplates\Info\PluginInfo;
 use srag\Plugins\SrRestoreRoleTemplates\Utils\SrRestoreRoleTemplatesTrait;
 
 /**
- * Class Job
+ * Class ReapplyRoleTemplatesJob
  *
- * @package srag\Plugins\SrRestoreRoleTemplates\Job
+ * @package srag\Plugins\SrRestoreRoleTemplates\ReapplyRoleTemplates
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
-class Job extends ilCronJob
+class ReapplyRoleTemplatesJob extends ilCronJob
 {
 
     use DICTrait;
     use SrRestoreRoleTemplatesTrait;
 
-    const CRON_JOB_ID = ilSrRestoreRoleTemplatesPlugin::PLUGIN_ID;
+    const CRON_JOB_ID = ilSrRestoreRoleTemplatesPlugin::PLUGIN_ID . "_reapply_role_templates";
     const PLUGIN_CLASS_NAME = ilSrRestoreRoleTemplatesPlugin::class;
-    const LANG_MODULE = "cron";
+    const LANG_MODULE = "reapply_role_templates";
 
 
     /**
@@ -51,7 +49,7 @@ class Job extends ilCronJob
      */
     public function getTitle() : string
     {
-        return ilSrRestoreRoleTemplatesPlugin::PLUGIN_NAME;
+        return self::class;
     }
 
 
@@ -87,7 +85,7 @@ class Job extends ilCronJob
      */
     public function getDefaultScheduleType() : int
     {
-        return self::SCHEDULE_TYPE_IN_HOURS;
+        return self::SCHEDULE_TYPE_DAILY;
     }
 
 
@@ -96,7 +94,7 @@ class Job extends ilCronJob
      */
     public function getDefaultScheduleValue()/*:?int*/
     {
-        return 1;
+        return null;
     }
 
 
@@ -107,9 +105,20 @@ class Job extends ilCronJob
     {
         $result = new ilCronJobResult();
 
+        $objects = self::srRestoreRoleTemplates()->reapplyRoleTemplates()->getObjects();
+
+        $count_roles = 0;
+
+        foreach ($objects as $obj) {
+            $count_roles += self::srRestoreRoleTemplates()->reapplyRoleTemplates()->reapplyRoleTemplates($obj);
+        }
+
         $result->setStatus(ilCronJobResult::STATUS_OK);
 
-        $result->setMessage("");
+        $result->setMessage(nl2br(self::plugin()->translate("result", ReapplyRoleTemplatesJob::LANG_MODULE, [
+            count($objects),
+            $count_roles
+        ]), false));
 
         return $result;
     }
