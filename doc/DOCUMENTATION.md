@@ -1,1 +1,1 @@
-## SrRestoreRoleTemplates Documentation
+# SrRestoreRoleTemplates ILIAS Plugin Documentation

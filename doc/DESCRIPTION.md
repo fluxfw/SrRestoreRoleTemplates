@@ -1,7 +1,7 @@
-## SrRestoreRoleTemplates Description
+# SrRestoreRoleTemplates ILIAS Plugin Description
 
-ReapplyRoleTemplatesJob:
+## ReapplyRoleTemplatesJob:
 
 
-RestoreDidacticTemplatesJob:
+## RestoreDidacticTemplatesJob:
 
