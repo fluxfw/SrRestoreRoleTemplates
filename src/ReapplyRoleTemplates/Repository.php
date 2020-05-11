@@ -105,9 +105,9 @@ AND object_reference.deleted IS NULL', [ilDBConstants::T_TEXT], ["crs"]);
     {
         $count = 0;
 
-        foreach ($obj->getDefaultCourseRoles() as $obj_role_tile=>$obj_role_id) {
-                $this->reapplyRoleTemplate($obj, $obj_role_id,current(ilObjRole::_getIdsForTitle($obj_role_tile,"rolt")));
-                $count++;
+        foreach ($obj->getDefaultCourseRoles() as $obj_role_tile => $obj_role_id) {
+            $this->reapplyRoleTemplate($obj, $obj_role_id, current(ilObjRole::_getIdsForTitle($obj_role_tile, "rolt")));
+            $count++;
         }
 
         return $count;
