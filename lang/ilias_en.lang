@@ -1,0 +1,6 @@
+reapply_didactic_templates_description#:#Reapply didactic templates to objects
+reapply_didactic_templates_result#:#Objects : %1$s\nTemplates : %2$s
+reapply_didactic_templates_title#:#Reapply didactic templates
+reapply_role_templates_description#:#Reapply role templates to objects
+reapply_role_templates_result#:#Objects : %1$s\nRoles : %2$s
+reapply_role_templates_title#:#Reapply role templates
