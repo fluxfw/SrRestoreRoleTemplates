@@ -9,6 +9,6 @@ return array(
     'srag\\RemovePluginDataConfirm\\SrRestoreRoleTemplates\\' => array($vendorDir . '/srag/removeplugindataconfirm/src'),
     'srag\\Plugins\\SrRestoreRoleTemplates\\' => array($baseDir . '/src'),
     'srag\\LibrariesNamespaceChanger\\' => array($vendorDir . '/srag/librariesnamespacechanger/src'),
-    'srag\\DIC\\SrRestoreRoleTemplates\\' => array($vendorDir . '/srag/dic/src'),
-    'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\' => array($vendorDir . '/srag/custominputguis/src'),
+    'srag\\DIC\\' => array($vendorDir . '/srag/dic/src'),
+    'srag\\CustomInputGUIs\\' => array($vendorDir . '/srag/custominputguis/src'),
 );
