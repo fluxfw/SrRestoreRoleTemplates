@@ -3,7 +3,8 @@
 namespace srag\Plugins\SrRestoreRoleTemplates\ReapplyRoleTemplates;
 
 use ilDBConstants;
-use ilObjCourse;
+use ilObject;
+use ilObjectFactory;
 use ilObjRole;
 use ilSrRestoreRoleTemplatesPlugin;
 use srag\DIC\SrRestoreRoleTemplates\DICTrait;
@@ -70,7 +71,7 @@ final class Repository
 
 
     /**
-     * @return ilObjCourse[]
+     * @return ilObject[]
      */
     public function getObjects() : array
     {
@@ -81,8 +82,8 @@ INNER JOIN object_reference ON object_data.obj_id=object_reference.obj_id
 WHERE type=%s
 AND object_reference.deleted IS NULL', [ilDBConstants::T_TEXT], ["crs"]);
 
-        return array_map(function (array $object) : ilObjCourse {
-            return new ilObjCourse($object["ref_id"]);
+        return array_map(function (array $object) : ilObject {
+            return ilObjectFactory::getInstanceByRefId($object["ref_id"]);
         }, self::dic()->database()->fetchAll($result));
     }
 
@@ -97,16 +98,16 @@ AND object_reference.deleted IS NULL', [ilDBConstants::T_TEXT], ["crs"]);
 
 
     /**
-     * @param ilObjCourse $obj
+     * @param ilObject $obj
      *
      * @return int
      */
-    public function reapplyRoleTemplates(ilObjCourse $obj) : int
+    public function reapplyRoleTemplates(ilObject $obj) : int
     {
         $count = 0;
 
-        foreach ($obj->getDefaultCourseRoles() as $obj_role_tile => $obj_role_id) {
-            $this->reapplyRoleTemplate($obj, $obj_role_id, current(ilObjRole::_getIdsForTitle($obj_role_tile, "rolt")));
+        foreach ($obj->getDefaultCourseRoles() as $obj_role_title => $obj_role_id) {
+            $this->reapplyRoleTemplate($obj, $obj_role_id, current(ilObjRole::_getIdsForTitle("il_" . preg_replace("/_role$/", "", $obj_role_title), "rolt")));
             $count++;
         }
 
@@ -115,11 +116,11 @@ AND object_reference.deleted IS NULL', [ilDBConstants::T_TEXT], ["crs"]);
 
 
     /**
-     * @param ilObjCourse $obj
-     * @param int         $obj_role_id
-     * @param int         $role_template_id
+     * @param ilObject $obj
+     * @param int      $obj_role_id
+     * @param int      $role_template_id
      */
-    protected function reapplyRoleTemplate(ilObjCourse $obj, int $obj_role_id, int $role_template_id)/*:void*/
+    protected function reapplyRoleTemplate(ilObject $obj, int $obj_role_id, int $role_template_id)/*:void*/
     {
         self::dic()
             ->rbac()

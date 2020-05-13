@@ -12,8 +12,8 @@ class ComposerStaticInit5efeb17eb25d8cb66b013b687eab8b27
             'srag\\RemovePluginDataConfirm\\SrRestoreRoleTemplates\\' => 52,
             'srag\\Plugins\\SrRestoreRoleTemplates\\' => 36,
             'srag\\LibrariesNamespaceChanger\\' => 31,
-            'srag\\DIC\\' => 9,
-            'srag\\CustomInputGUIs\\' => 21,
+            'srag\\DIC\\SrRestoreRoleTemplates\\' => 32,
+            'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\' => 44,
         ),
     );
 
@@ -30,11 +30,11 @@ class ComposerStaticInit5efeb17eb25d8cb66b013b687eab8b27
         array (
             0 => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src',
         ),
-        'srag\\DIC\\' => 
+        'srag\\DIC\\SrRestoreRoleTemplates\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/dic/src',
         ),
-        'srag\\CustomInputGUIs\\' => 
+        'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/custominputguis/src',
         ),
@@ -143,13 +143,13 @@ class ComposerStaticInit5efeb17eb25d8cb66b013b687eab8b27
         'srag\\LibrariesNamespaceChanger\\RemovePHP72Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/RemovePHP72Backport.php',
         'srag\\Plugins\\SrRestoreRoleTemplates\\Job\\Factory' => __DIR__ . '/../..' . '/src/Job/Factory.php',
         'srag\\Plugins\\SrRestoreRoleTemplates\\Job\\Repository' => __DIR__ . '/../..' . '/src/Job/Repository.php',
+        'srag\\Plugins\\SrRestoreRoleTemplates\\ReapplyDidacticTemplates\\Factory' => __DIR__ . '/../..' . '/src/ReapplyDidacticTemplates/Factory.php',
+        'srag\\Plugins\\SrRestoreRoleTemplates\\ReapplyDidacticTemplates\\ReapplyDidacticTemplatesJob' => __DIR__ . '/../..' . '/src/ReapplyDidacticTemplates/ReapplyDidacticTemplatesJob.php',
+        'srag\\Plugins\\SrRestoreRoleTemplates\\ReapplyDidacticTemplates\\Repository' => __DIR__ . '/../..' . '/src/ReapplyDidacticTemplates/Repository.php',
         'srag\\Plugins\\SrRestoreRoleTemplates\\ReapplyRoleTemplates\\Factory' => __DIR__ . '/../..' . '/src/ReapplyRoleTemplates/Factory.php',
         'srag\\Plugins\\SrRestoreRoleTemplates\\ReapplyRoleTemplates\\ReapplyRoleTemplatesJob' => __DIR__ . '/../..' . '/src/ReapplyRoleTemplates/ReapplyRoleTemplatesJob.php',
         'srag\\Plugins\\SrRestoreRoleTemplates\\ReapplyRoleTemplates\\Repository' => __DIR__ . '/../..' . '/src/ReapplyRoleTemplates/Repository.php',
         'srag\\Plugins\\SrRestoreRoleTemplates\\Repository' => __DIR__ . '/../..' . '/src/Repository.php',
-        'srag\\Plugins\\SrRestoreRoleTemplates\\RestoreDidacticTemplates\\Factory' => __DIR__ . '/../..' . '/src/RestoreDidacticTemplates/Factory.php',
-        'srag\\Plugins\\SrRestoreRoleTemplates\\RestoreDidacticTemplates\\Repository' => __DIR__ . '/../..' . '/src/RestoreDidacticTemplates/Repository.php',
-        'srag\\Plugins\\SrRestoreRoleTemplates\\RestoreDidacticTemplates\\RestoreDidacticTemplatesJob' => __DIR__ . '/../..' . '/src/RestoreDidacticTemplates/RestoreDidacticTemplatesJob.php',
         'srag\\Plugins\\SrRestoreRoleTemplates\\Utils\\SrRestoreRoleTemplatesTrait' => __DIR__ . '/../..' . '/src/Utils/SrRestoreRoleTemplatesTrait.php',
         'srag\\RemovePluginDataConfirm\\SrRestoreRoleTemplates\\BasePluginUninstallTrait' => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src/BasePluginUninstallTrait.php',
         'srag\\RemovePluginDataConfirm\\SrRestoreRoleTemplates\\PluginUninstallTrait' => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src/PluginUninstallTrait.php',

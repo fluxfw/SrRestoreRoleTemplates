@@ -5,8 +5,8 @@ namespace srag\Plugins\SrRestoreRoleTemplates;
 use ilSrRestoreRoleTemplatesPlugin;
 use srag\DIC\SrRestoreRoleTemplates\DICTrait;
 use srag\Plugins\SrRestoreRoleTemplates\Job\Repository as JobsRepository;
+use srag\Plugins\SrRestoreRoleTemplates\ReapplyDidacticTemplates\Repository as ReapplyDidacticTemplatesRepository;
 use srag\Plugins\SrRestoreRoleTemplates\ReapplyRoleTemplates\Repository as ReapplyRoleTemplatesRepository;
-use srag\Plugins\SrRestoreRoleTemplates\RestoreDidacticTemplates\Repository as RestoreDidacticTemplatesRepository;
 use srag\Plugins\SrRestoreRoleTemplates\Utils\SrRestoreRoleTemplatesTrait;
 
 /**
@@ -57,8 +57,8 @@ final class Repository
     public function dropTables()/*:void*/
     {
         $this->jobs()->dropTables();
+        $this->reapplyDidacticTemplates()->dropTables();
         $this->reapplyRoleTemplates()->dropTables();
-        $this->restoreDidacticTemplates()->dropTables();
     }
 
 
@@ -68,8 +68,8 @@ final class Repository
     public function installTables()/*:void*/
     {
         $this->jobs()->installTables();
+        $this->reapplyDidacticTemplates()->installTables();
         $this->reapplyRoleTemplates()->installTables();
-        $this->restoreDidacticTemplates()->installTables();
     }
 
 
@@ -83,19 +83,19 @@ final class Repository
 
 
     /**
+     * @return ReapplyDidacticTemplatesRepository
+     */
+    public function reapplyDidacticTemplates() : ReapplyDidacticTemplatesRepository
+    {
+        return ReapplyDidacticTemplatesRepository::getInstance();
+    }
+
+
+    /**
      * @return ReapplyRoleTemplatesRepository
      */
     public function reapplyRoleTemplates() : ReapplyRoleTemplatesRepository
     {
         return ReapplyRoleTemplatesRepository::getInstance();
-    }
-
-
-    /**
-     * @return RestoreDidacticTemplatesRepository
-     */
-    public function restoreDidacticTemplates() : RestoreDidacticTemplatesRepository
-    {
-        return RestoreDidacticTemplatesRepository::getInstance();
     }
 }

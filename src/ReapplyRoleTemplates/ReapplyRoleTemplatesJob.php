@@ -49,7 +49,7 @@ class ReapplyRoleTemplatesJob extends ilCronJob
      */
     public function getTitle() : string
     {
-        return self::class;
+        return ilSrRestoreRoleTemplatesPlugin::PLUGIN_NAME . ": " . self::plugin()->translate("title", self::LANG_MODULE);
     }
 
 
@@ -58,7 +58,7 @@ class ReapplyRoleTemplatesJob extends ilCronJob
      */
     public function getDescription() : string
     {
-        return "";
+        return self::plugin()->translate("description", self::LANG_MODULE);
     }
 
 
@@ -115,7 +115,7 @@ class ReapplyRoleTemplatesJob extends ilCronJob
 
         $result->setStatus(ilCronJobResult::STATUS_OK);
 
-        $result->setMessage(nl2br(self::plugin()->translate("result", ReapplyRoleTemplatesJob::LANG_MODULE, [
+        $result->setMessage(nl2br(self::plugin()->translate("result", self::LANG_MODULE, [
             count($objects),
             $count_roles
         ]), false));

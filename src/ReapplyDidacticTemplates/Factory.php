@@ -1,19 +1,19 @@
 <?php
 
-namespace srag\Plugins\SrRestoreRoleTemplates\RestoreDidacticTemplates;
+namespace srag\Plugins\SrRestoreRoleTemplates\ReapplyDidacticTemplates;
 
 use ilSrRestoreRoleTemplatesPlugin;
 use srag\DIC\SrRestoreRoleTemplates\DICTrait;
 use srag\Plugins\SrRestoreRoleTemplates\Utils\SrRestoreRoleTemplatesTrait;
 
 /**
- * Class Repository
+ * Class Factory
  *
- * @package srag\Plugins\SrRestoreRoleTemplates\RestoreDidacticTemplates
+ * @package srag\Plugins\SrRestoreRoleTemplates\ReapplyDidacticTemplates
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
-final class Repository
+final class Factory
 {
 
     use DICTrait;
@@ -40,7 +40,7 @@ final class Repository
 
 
     /**
-     * Repository constructor
+     * Factory constructor
      */
     private function __construct()
     {
@@ -49,28 +49,12 @@ final class Repository
 
 
     /**
-     * @internal
+     * @return ReapplyDidacticTemplatesJob
      */
-    public function dropTables()/*: void*/
+    public function newJobInstance() : ReapplyDidacticTemplatesJob
     {
+        $job = new ReapplyDidacticTemplatesJob();
 
-    }
-
-
-    /**
-     * @return Factory
-     */
-    public function factory() : Factory
-    {
-        return Factory::getInstance();
-    }
-
-
-    /**
-     * @internal
-     */
-    public function installTables()/*: void*/
-    {
-
+        return $job;
     }
 }
