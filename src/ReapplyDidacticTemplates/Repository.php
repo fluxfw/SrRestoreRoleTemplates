@@ -4,6 +4,7 @@ namespace srag\Plugins\SrRestoreRoleTemplates\ReapplyDidacticTemplates;
 
 use ilDidacticTemplateObjSettings;
 use ilObject;
+use ilObjectFactory;
 use ilSrRestoreRoleTemplatesPlugin;
 use srag\DIC\SrRestoreRoleTemplates\DICTrait;
 use srag\Plugins\SrRestoreRoleTemplates\Utils\SrRestoreRoleTemplatesTrait;
@@ -73,7 +74,26 @@ final class Repository
      */
     public function getObjects() : array
     {
-        return self::srRestoreRoleTemplates()->reapplyRoleTemplates()->getObjects();
+        $result = self::dic()->database()->query('
+SELECT ref_id
+FROM object_data
+INNER JOIN object_reference ON object_data.obj_id=object_reference.obj_id
+WHERE object_reference.deleted IS NULL');
+
+        return array_map(function (array $object) : ilObject {
+            return ilObjectFactory::getInstanceByRefId($object["ref_id"]);
+        }, self::dic()->database()->fetchAll($result));
+    }
+
+
+    /**
+     * @param int $obj_ref_id
+     *
+     * @return int|null
+     */
+    protected function getDidacticTemplateIdFromObject(int $obj_ref_id)/*:?int*/
+    {
+        return ilDidacticTemplateObjSettings::lookupTemplateId($obj_ref_id);
     }
 
 
@@ -93,13 +113,13 @@ final class Repository
      */
     public function reapplyDidacticTemplates(ilObject $obj) : int
     {
-        $template_id = ilDidacticTemplateObjSettings::lookupTemplateId($obj->getRefId());
+        $tpl_id = $this->getDidacticTemplateIdFromObject($obj->getRefId());
 
-        if (empty($template_id)) {
+        if (empty($tpl_id)) {
             return 0;
         }
 
-        $obj->applyDidacticTemplate($template_id);
+        $obj->applyDidacticTemplate($tpl_id);
 
         return 1;
     }
