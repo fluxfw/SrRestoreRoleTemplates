@@ -12,7 +12,7 @@ class ComposerStaticInit5efeb17eb25d8cb66b013b687eab8b27
             'srag\\RemovePluginDataConfirm\\SrRestoreRoleTemplates\\' => 52,
             'srag\\Plugins\\SrRestoreRoleTemplates\\' => 36,
             'srag\\LibrariesNamespaceChanger\\' => 31,
-            'srag\\DIC\\' => 9,
+            'srag\\DIC\\SrRestoreRoleTemplates\\' => 32,
             'srag\\CustomInputGUIs\\' => 21,
         ),
     );
@@ -30,7 +30,7 @@ class ComposerStaticInit5efeb17eb25d8cb66b013b687eab8b27
         array (
             0 => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src',
         ),
-        'srag\\DIC\\' => 
+        'srag\\DIC\\SrRestoreRoleTemplates\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/dic/src',
         ),
@@ -44,6 +44,7 @@ class ComposerStaticInit5efeb17eb25d8cb66b013b687eab8b27
         'ilSrRestoreRoleTemplatesPlugin' => __DIR__ . '/../..' . '/classes/class.ilSrRestoreRoleTemplatesPlugin.php',
         'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\CheckboxInputGUI\\AjaxCheckbox' => __DIR__ . '/..' . '/srag/custominputguis/src/AjaxCheckbox/AjaxCheckbox.php',
         'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\CheckboxInputGUI\\CheckboxInputGUI' => __DIR__ . '/..' . '/srag/custominputguis/src/CheckboxInputGUI/CheckboxInputGUI.php',
+        'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\ColorPickerInputGUI\\ColorPickerInputGUI' => __DIR__ . '/..' . '/srag/custominputguis/src/ColorPickerInputGUI/ColorPickerInputGUI.php',
         'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\CustomInputGUIs' => __DIR__ . '/..' . '/srag/custominputguis/src/CustomInputGUIs.php',
         'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\CustomInputGUIsTrait' => __DIR__ . '/..' . '/srag/custominputguis/src/CustomInputGUIsTrait.php',
         'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\DateDurationInputGUI\\DateDurationInputGUI' => __DIR__ . '/..' . '/srag/custominputguis/src/DateDurationInputGUI/DateDurationInputGUI.php',
