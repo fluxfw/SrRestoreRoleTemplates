@@ -12,8 +12,8 @@ class ComposerStaticInit5efeb17eb25d8cb66b013b687eab8b27
             'srag\\RemovePluginDataConfirm\\SrRestoreRoleTemplates\\' => 52,
             'srag\\Plugins\\SrRestoreRoleTemplates\\' => 36,
             'srag\\LibrariesNamespaceChanger\\' => 31,
-            'srag\\DIC\\SrRestoreRoleTemplates\\' => 32,
-            'srag\\CustomInputGUIs\\' => 21,
+            'srag\\DIC\\' => 9,
+            'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\' => 44,
         ),
     );
 
@@ -30,11 +30,11 @@ class ComposerStaticInit5efeb17eb25d8cb66b013b687eab8b27
         array (
             0 => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src',
         ),
-        'srag\\DIC\\SrRestoreRoleTemplates\\' => 
+        'srag\\DIC\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/dic/src',
         ),
-        'srag\\CustomInputGUIs\\' => 
+        'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/custominputguis/src',
         ),
