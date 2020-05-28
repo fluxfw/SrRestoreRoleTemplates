@@ -9,7 +9,9 @@ use ilAsqFactory;
 use ilAuthSession;
 use ilBenchmark;
 use ilBookingManagerService;
+use ilBookingReservationDBRepositoryFactory;
 use ilBrowser;
+use ilCertificateActiveValidator;
 use ilComponentLogger;
 use ilConditionService;
 use ilCtrl;
@@ -17,6 +19,7 @@ use ilCtrlStructureReader;
 use ilDBInterface;
 use ilErrorHandling;
 use ilExerciseFactory;
+use ilFavouritesDBRepository;
 use ilHelpGUI;
 use ILIAS;
 use ILIAS\DI\BackgroundTaskServices;
@@ -29,6 +32,10 @@ use ILIAS\Filesystem\Filesystems;
 use ILIAS\FileUpload\FileUpload;
 use ILIAS\GlobalScreen\Services as GlobalScreenService;
 use ILIAS\Refinery\Factory as RefineryFactory;
+use ILIAS\UI\Implementation\Render\JavaScriptBinding;
+use ILIAS\UI\Implementation\Render\Loader;
+use ILIAS\UI\Implementation\Render\ResourceRegistry;
+use ILIAS\UI\Implementation\Render\TemplateFactory;
 use ilIniFile;
 use ilLanguage;
 use ilLearningHistoryService;
@@ -37,11 +44,13 @@ use ilLoggerFactory;
 use ilMailMimeSenderFactory;
 use ilMailMimeTransportFactory;
 use ilMainMenuGUI;
+use ilMMItemRepository;
 use ilNavigationHistory;
 use ilNewsService;
 use ilObjectDataCache;
 use ilObjectDefinition;
 use ilObjectService;
+use ilObjUseBookDBRepository;
 use ilObjUser;
 use ilPluginAdmin;
 use ilRbacAdmin;
@@ -126,9 +135,36 @@ final class ILIAS54DIC extends AbstractDIC
     /**
      * @inheritDoc
      */
+    public function bookingObjUseBook() : ilObjUseBookDBRepository
+    {
+        throw new DICException("ilObjUseBookDBRepository not exists in ILIAS 5.4 or below!");
+    }
+
+
+    /**
+     * @inheritDoc
+     */
+    public function bookingReservation() : ilBookingReservationDBRepositoryFactory
+    {
+        throw new DICException("ilBookingReservationDBRepositoryFactory not exists in ILIAS 5.4 or below!");
+    }
+
+
+    /**
+     * @inheritDoc
+     */
     public function browser() : ilBrowser
     {
         return $this->dic["ilBrowser"];
+    }
+
+
+    /**
+     * @inheritDoc
+     */
+    public function certificateActiveValidator() : ilCertificateActiveValidator
+    {
+        return new ilCertificateActiveValidator();
     }
 
 
@@ -207,6 +243,15 @@ final class ILIAS54DIC extends AbstractDIC
     /**
      * @inheritDoc
      */
+    public function favourites() : ilFavouritesDBRepository
+    {
+        throw new DICException("ilFavouritesDBRepository not exists in ILIAS 5.4 or below!");
+    }
+
+
+    /**
+     * @inheritDoc
+     */
     public function filesystem() : Filesystems
     {
         return $this->dic->filesystem();
@@ -264,6 +309,15 @@ final class ILIAS54DIC extends AbstractDIC
     public function iliasIni() : ilIniFile
     {
         return $this->dic->iliasIni();
+    }
+
+
+    /**
+     * @inheritDoc
+     */
+    public function javaScriptBinding() : JavaScriptBinding
+    {
+        return $this->dic["ui.javascript_binding"];
     }
 
 
@@ -345,6 +399,15 @@ final class ILIAS54DIC extends AbstractDIC
     public function mainMenu() : ilMainMenuGUI
     {
         return $this->dic["ilMainMenu"];
+    }
+
+
+    /**
+     * @inheritDoc
+     */
+    public function mainMenuItem() : ilMMItemRepository
+    {
+        return new ilMMItemRepository();
     }
 
 
@@ -467,9 +530,27 @@ final class ILIAS54DIC extends AbstractDIC
     /**
      * @inheritDoc
      */
+    public function rendererLoader() : Loader
+    {
+        return $this->dic["ui.component_renderer_loader"];
+    }
+
+
+    /**
+     * @inheritDoc
+     */
     public function repositoryTree() : ilTree
     {
         return $this->dic->repositoryTree();
+    }
+
+
+    /**
+     * @inheritDoc
+     */
+    public function resourceRegistry() : ResourceRegistry
+    {
+        return $this->dic["ui.resource_registry"];
     }
 
 
@@ -515,6 +596,15 @@ final class ILIAS54DIC extends AbstractDIC
     public function task() : ilTaskService
     {
         throw new DICException("ilTaskService not exists in ILIAS 5.4 or below!");
+    }
+
+
+    /**
+     * @inheritDoc
+     */
+    public function templateFactory() : TemplateFactory
+    {
+        return $this->dic["ui.template_factory"];
     }
 
 

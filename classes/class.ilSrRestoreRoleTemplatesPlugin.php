@@ -2,6 +2,8 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
+use ILIAS\DI\Container;
+use srag\CustomInputGUIs\SrRestoreRoleTemplates\Loader\CustomInputGUIsLoaderDetector;
 use srag\Plugins\SrRestoreRoleTemplates\Utils\SrRestoreRoleTemplatesTrait;
 use srag\RemovePluginDataConfirm\SrRestoreRoleTemplates\PluginUninstallTrait;
 
@@ -91,5 +93,14 @@ class ilSrRestoreRoleTemplatesPlugin extends ilCronHookPlugin
     protected function deleteData()/*: void*/
     {
         self::srRestoreRoleTemplates()->dropTables();
+    }
+
+
+    /**
+     * @inheritDoc
+     */
+    public function exchangeUIRendererAfterInitialization(Container $dic) : Closure
+    {
+        return CustomInputGUIsLoaderDetector::exchangeUIRendererAfterInitialization();
     }
 }
