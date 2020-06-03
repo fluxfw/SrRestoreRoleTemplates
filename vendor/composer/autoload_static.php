@@ -9,16 +9,16 @@ class ComposerStaticInit5efeb17eb25d8cb66b013b687eab8b27
     public static $prefixLengthsPsr4 = array (
         's' => 
         array (
-            'srag\\RemovePluginDataConfirm\\SrRestoreRoleTemplates\\' => 52,
+            'srag\\RemovePluginDataConfirm\\' => 29,
             'srag\\Plugins\\SrRestoreRoleTemplates\\' => 36,
             'srag\\LibrariesNamespaceChanger\\' => 31,
             'srag\\DIC\\SrRestoreRoleTemplates\\' => 32,
-            'srag\\CustomInputGUIs\\' => 21,
+            'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\' => 44,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'srag\\RemovePluginDataConfirm\\SrRestoreRoleTemplates\\' => 
+        'srag\\RemovePluginDataConfirm\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src',
         ),
@@ -34,7 +34,7 @@ class ComposerStaticInit5efeb17eb25d8cb66b013b687eab8b27
         array (
             0 => __DIR__ . '/..' . '/srag/dic/src',
         ),
-        'srag\\CustomInputGUIs\\' => 
+        'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/custominputguis/src',
         ),
