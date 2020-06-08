@@ -6,6 +6,10 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit5efeb17eb25d8cb66b013b687eab8b27
 {
+    public static $files = array (
+        '7b9e7e18202e6aa0aa27ed7be02f2944' => __DIR__ . '/..' . '/srag/dic/src/PHPVersionChecker.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         's' => 
         array (
@@ -13,7 +17,7 @@ class ComposerStaticInit5efeb17eb25d8cb66b013b687eab8b27
             'srag\\Plugins\\SrRestoreRoleTemplates\\' => 36,
             'srag\\LibrariesNamespaceChanger\\' => 31,
             'srag\\DIC\\SrRestoreRoleTemplates\\' => 32,
-            'srag\\CustomInputGUIs\\' => 21,
+            'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\' => 44,
         ),
     );
 
@@ -34,7 +38,7 @@ class ComposerStaticInit5efeb17eb25d8cb66b013b687eab8b27
         array (
             0 => __DIR__ . '/..' . '/srag/dic/src',
         ),
-        'srag\\CustomInputGUIs\\' => 
+        'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/custominputguis/src',
         ),
@@ -130,6 +134,7 @@ class ComposerStaticInit5efeb17eb25d8cb66b013b687eab8b27
         'srag\\DIC\\SrRestoreRoleTemplates\\Util\\LibraryLanguageInstaller' => __DIR__ . '/..' . '/srag/dic/src/Util/LibraryLanguageInstaller.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\Version\\Version' => __DIR__ . '/..' . '/srag/dic/src/Version/Version.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\Version\\VersionInterface' => __DIR__ . '/..' . '/srag/dic/src/Version/VersionInterface.php',
+        'srag\\LibrariesNamespaceChanger\\GeneratePluginPhp' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/GeneratePluginPhp.php',
         'srag\\LibrariesNamespaceChanger\\LibrariesNamespaceChanger' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/LibrariesNamespaceChanger.php',
         'srag\\LibrariesNamespaceChanger\\PHP72Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/PHP72Backport.php',
         'srag\\LibrariesNamespaceChanger\\PHP7Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/PHP7Backport.php',
