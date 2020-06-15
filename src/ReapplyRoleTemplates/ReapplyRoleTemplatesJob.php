@@ -22,8 +22,8 @@ class ReapplyRoleTemplatesJob extends ilCronJob
     use SrRestoreRoleTemplatesTrait;
 
     const CRON_JOB_ID = ilSrRestoreRoleTemplatesPlugin::PLUGIN_ID . "_reapply_role_templates";
-    const PLUGIN_CLASS_NAME = ilSrRestoreRoleTemplatesPlugin::class;
     const LANG_MODULE = "reapply_role_templates";
+    const PLUGIN_CLASS_NAME = ilSrRestoreRoleTemplatesPlugin::class;
 
 
     /**
@@ -32,6 +32,33 @@ class ReapplyRoleTemplatesJob extends ilCronJob
     public function __construct()
     {
 
+    }
+
+
+    /**
+     * @inheritDoc
+     */
+    public function getDefaultScheduleType() : int
+    {
+        return self::SCHEDULE_TYPE_DAILY;
+    }
+
+
+    /**
+     * @inheritDoc
+     */
+    public function getDefaultScheduleValue()/*:?int*/
+    {
+        return null;
+    }
+
+
+    /**
+     * @inheritDoc
+     */
+    public function getDescription() : string
+    {
+        return self::plugin()->translate("description", self::LANG_MODULE);
     }
 
 
@@ -56,15 +83,6 @@ class ReapplyRoleTemplatesJob extends ilCronJob
     /**
      * @inheritDoc
      */
-    public function getDescription() : string
-    {
-        return self::plugin()->translate("description", self::LANG_MODULE);
-    }
-
-
-    /**
-     * @inheritDoc
-     */
     public function hasAutoActivation() : bool
     {
         return true;
@@ -77,24 +95,6 @@ class ReapplyRoleTemplatesJob extends ilCronJob
     public function hasFlexibleSchedule() : bool
     {
         return true;
-    }
-
-
-    /**
-     * @inheritDoc
-     */
-    public function getDefaultScheduleType() : int
-    {
-        return self::SCHEDULE_TYPE_DAILY;
-    }
-
-
-    /**
-     * @inheritDoc
-     */
-    public function getDefaultScheduleValue()/*:?int*/
-    {
-        return null;
     }
 
 

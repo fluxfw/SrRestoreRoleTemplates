@@ -30,6 +30,15 @@ final class Repository
 
 
     /**
+     * Repository constructor
+     */
+    private function __construct()
+    {
+
+    }
+
+
+    /**
      * @return self
      */
     public static function getInstance() : self
@@ -39,15 +48,6 @@ final class Repository
         }
 
         return self::$instance;
-    }
-
-
-    /**
-     * Repository constructor
-     */
-    private function __construct()
-    {
-
     }
 
 
@@ -87,17 +87,6 @@ WHERE object_reference.deleted IS NULL');
 
 
     /**
-     * @param int $obj_ref_id
-     *
-     * @return int|null
-     */
-    protected function getDidacticTemplateIdFromObject(int $obj_ref_id)/*:?int*/
-    {
-        return ilDidacticTemplateObjSettings::lookupTemplateId($obj_ref_id);
-    }
-
-
-    /**
      * @internal
      */
     public function installTables()/*: void*/
@@ -122,5 +111,16 @@ WHERE object_reference.deleted IS NULL');
         $obj->applyDidacticTemplate($tpl_id);
 
         return 1;
+    }
+
+
+    /**
+     * @param int $obj_ref_id
+     *
+     * @return int|null
+     */
+    protected function getDidacticTemplateIdFromObject(int $obj_ref_id)/*:?int*/
+    {
+        return ilDidacticTemplateObjSettings::lookupTemplateId($obj_ref_id);
     }
 }
