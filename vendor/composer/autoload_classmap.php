@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'ilSrRestoreRoleTemplatesConfigGUI' => $baseDir . '/classes/class.ilSrRestoreRoleTemplatesConfigGUI.php',
     'ilSrRestoreRoleTemplatesPlugin' => $baseDir . '/classes/class.ilSrRestoreRoleTemplatesPlugin.php',
     'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\CheckboxInputGUI\\AjaxCheckbox' => $vendorDir . '/srag/custominputguis/src/AjaxCheckbox/AjaxCheckbox.php',
     'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\CheckboxInputGUI\\CheckboxInputGUI' => $vendorDir . '/srag/custominputguis/src/CheckboxInputGUI/CheckboxInputGUI.php',
@@ -68,6 +69,7 @@ return array(
     'srag\\DIC\\SrRestoreRoleTemplates\\Database\\DatabaseInterface' => $vendorDir . '/srag/dic/src/Database/DatabaseInterface.php',
     'srag\\DIC\\SrRestoreRoleTemplates\\Database\\PdoContextHelper' => $vendorDir . '/srag/dic/src/Database/PdoContextHelper.php',
     'srag\\DIC\\SrRestoreRoleTemplates\\Database\\PdoStatementContextHelper' => $vendorDir . '/srag/dic/src/Database/PdoStatementContextHelper.php',
+    'srag\\DIC\\SrRestoreRoleTemplates\\DevTools\\DevToolsCtrl' => $vendorDir . '/srag/dic/src/DevTools/class.DevToolsCtrl.php',
     'srag\\DIC\\SrRestoreRoleTemplates\\Exception\\DICException' => $vendorDir . '/srag/dic/src/Exception/DICException.php',
     'srag\\DIC\\SrRestoreRoleTemplates\\Loader\\AbstractLoaderDetector' => $vendorDir . '/srag/dic/src/Loader/AbstractLoaderDetector.php',
     'srag\\DIC\\SrRestoreRoleTemplates\\Output\\Output' => $vendorDir . '/srag/dic/src/Output/Output.php',

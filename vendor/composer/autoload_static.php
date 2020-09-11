@@ -45,6 +45,7 @@ class ComposerStaticInit5efeb17eb25d8cb66b013b687eab8b27
     );
 
     public static $classMap = array (
+        'ilSrRestoreRoleTemplatesConfigGUI' => __DIR__ . '/../..' . '/classes/class.ilSrRestoreRoleTemplatesConfigGUI.php',
         'ilSrRestoreRoleTemplatesPlugin' => __DIR__ . '/../..' . '/classes/class.ilSrRestoreRoleTemplatesPlugin.php',
         'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\CheckboxInputGUI\\AjaxCheckbox' => __DIR__ . '/..' . '/srag/custominputguis/src/AjaxCheckbox/AjaxCheckbox.php',
         'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\CheckboxInputGUI\\CheckboxInputGUI' => __DIR__ . '/..' . '/srag/custominputguis/src/CheckboxInputGUI/CheckboxInputGUI.php',
@@ -107,6 +108,7 @@ class ComposerStaticInit5efeb17eb25d8cb66b013b687eab8b27
         'srag\\DIC\\SrRestoreRoleTemplates\\Database\\DatabaseInterface' => __DIR__ . '/..' . '/srag/dic/src/Database/DatabaseInterface.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\Database\\PdoContextHelper' => __DIR__ . '/..' . '/srag/dic/src/Database/PdoContextHelper.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\Database\\PdoStatementContextHelper' => __DIR__ . '/..' . '/srag/dic/src/Database/PdoStatementContextHelper.php',
+        'srag\\DIC\\SrRestoreRoleTemplates\\DevTools\\DevToolsCtrl' => __DIR__ . '/..' . '/srag/dic/src/DevTools/class.DevToolsCtrl.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\Exception\\DICException' => __DIR__ . '/..' . '/srag/dic/src/Exception/DICException.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\Loader\\AbstractLoaderDetector' => __DIR__ . '/..' . '/srag/dic/src/Loader/AbstractLoaderDetector.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\Output\\Output' => __DIR__ . '/..' . '/srag/dic/src/Output/Output.php',
