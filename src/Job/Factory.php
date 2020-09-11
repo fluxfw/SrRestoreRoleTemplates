@@ -30,19 +30,6 @@ final class Factory
 
 
     /**
-     * @return self
-     */
-    public static function getInstance() : self
-    {
-        if (self::$instance === null) {
-            self::$instance = new self();
-        }
-
-        return self::$instance;
-    }
-
-
-    /**
      * Factory constructor
      */
     private function __construct()
@@ -52,14 +39,15 @@ final class Factory
 
 
     /**
-     * @return ilCronJob[]
+     * @return self
      */
-    public function newInstances() : array
+    public static function getInstance() : self
     {
-        return [
-            self::srRestoreRoleTemplates()->reapplyDidacticTemplates()->factory()->newJobInstance(),
-            self::srRestoreRoleTemplates()->reapplyRoleTemplates()->factory()->newJobInstance()
-        ];
+        if (self::$instance === null) {
+            self::$instance = new self();
+        }
+
+        return self::$instance;
     }
 
 
@@ -80,5 +68,17 @@ final class Factory
             default:
                 return null;
         }
+    }
+
+
+    /**
+     * @return ilCronJob[]
+     */
+    public function newInstances() : array
+    {
+        return [
+            self::srRestoreRoleTemplates()->reapplyDidacticTemplates()->factory()->newJobInstance(),
+            self::srRestoreRoleTemplates()->reapplyRoleTemplates()->factory()->newJobInstance()
+        ];
     }
 }

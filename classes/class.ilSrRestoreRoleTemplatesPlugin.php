@@ -4,6 +4,7 @@ require_once __DIR__ . "/../vendor/autoload.php";
 
 use ILIAS\DI\Container;
 use srag\CustomInputGUIs\SrRestoreRoleTemplates\Loader\CustomInputGUIsLoaderDetector;
+use srag\DIC\SrRestoreRoleTemplates\DevTools\DevToolsCtrl;
 use srag\Plugins\SrRestoreRoleTemplates\Utils\SrRestoreRoleTemplatesTrait;
 use srag\RemovePluginDataConfirm\SrRestoreRoleTemplates\PluginUninstallTrait;
 
@@ -18,13 +19,22 @@ class ilSrRestoreRoleTemplatesPlugin extends ilCronHookPlugin
     use PluginUninstallTrait;
     use SrRestoreRoleTemplatesTrait;
 
+    const PLUGIN_CLASS_NAME = self::class;
     const PLUGIN_ID = "srresroltem";
     const PLUGIN_NAME = "SrRestoreRoleTemplates";
-    const PLUGIN_CLASS_NAME = self::class;
     /**
      * @var self|null
      */
     protected static $instance = null;
+
+
+    /**
+     * ilSrRestoreRoleTemplatesPlugin constructor
+     */
+    public function __construct()
+    {
+        parent::__construct();
+    }
 
 
     /**
@@ -41,29 +51,11 @@ class ilSrRestoreRoleTemplatesPlugin extends ilCronHookPlugin
 
 
     /**
-     * ilSrRestoreRoleTemplatesPlugin constructor
-     */
-    public function __construct()
-    {
-        parent::__construct();
-    }
-
-
-    /**
      * @inheritDoc
      */
-    public function getPluginName() : string
+    public function exchangeUIRendererAfterInitialization(Container $dic) : Closure
     {
-        return self::PLUGIN_NAME;
-    }
-
-
-    /**
-     * @inheritDoc
-     */
-    public function getCronJobInstances() : array
-    {
-        return self::srRestoreRoleTemplates()->jobs()->factory()->newInstances();
+        return CustomInputGUIsLoaderDetector::exchangeUIRendererAfterInitialization();
     }
 
 
@@ -79,11 +71,31 @@ class ilSrRestoreRoleTemplatesPlugin extends ilCronHookPlugin
     /**
      * @inheritDoc
      */
+    public function getCronJobInstances() : array
+    {
+        return self::srRestoreRoleTemplates()->jobs()->factory()->newInstances();
+    }
+
+
+    /**
+     * @inheritDoc
+     */
+    public function getPluginName() : string
+    {
+        return self::PLUGIN_NAME;
+    }
+
+
+    /**
+     * @inheritDoc
+     */
     public function updateLanguages(/*?array*/ $a_lang_keys = null)/*:void*/
     {
         parent::updateLanguages($a_lang_keys);
 
         $this->installRemovePluginDataConfirmLanguages();
+
+        DevToolsCtrl::installLanguages(self::plugin());
     }
 
 
@@ -99,8 +111,8 @@ class ilSrRestoreRoleTemplatesPlugin extends ilCronHookPlugin
     /**
      * @inheritDoc
      */
-    public function exchangeUIRendererAfterInitialization(Container $dic) : Closure
+    protected function shouldUseOneUpdateStepOnly() : bool
     {
-        return CustomInputGUIsLoaderDetector::exchangeUIRendererAfterInitialization();
+        return true;
     }
 }
