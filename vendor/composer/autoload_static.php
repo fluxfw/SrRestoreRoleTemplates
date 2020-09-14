@@ -4,25 +4,26 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit5efeb17eb25d8cb66b013b687eab8b27
+class ComposerStaticInit8cf1720199af972954ebf6a3269191f8
 {
     public static $files = array (
         '7b9e7e18202e6aa0aa27ed7be02f2944' => __DIR__ . '/..' . '/srag/dic/src/PHPVersionChecker.php',
+        '264bf9a468ebd3de4ba2d172857e6ce2' => __DIR__ . '/..' . '/srag/dic/src/Ilias7PreWarn.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         's' => 
         array (
-            'srag\\RemovePluginDataConfirm\\SrRestoreRoleTemplates\\' => 52,
+            'srag\\RemovePluginDataConfirm\\' => 29,
             'srag\\Plugins\\SrRestoreRoleTemplates\\' => 36,
             'srag\\LibrariesNamespaceChanger\\' => 31,
-            'srag\\DIC\\SrRestoreRoleTemplates\\' => 32,
-            'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\' => 44,
+            'srag\\DIC\\' => 9,
+            'srag\\CustomInputGUIs\\' => 21,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'srag\\RemovePluginDataConfirm\\SrRestoreRoleTemplates\\' => 
+        'srag\\RemovePluginDataConfirm\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src',
         ),
@@ -34,11 +35,11 @@ class ComposerStaticInit5efeb17eb25d8cb66b013b687eab8b27
         array (
             0 => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src',
         ),
-        'srag\\DIC\\SrRestoreRoleTemplates\\' => 
+        'srag\\DIC\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/dic/src',
         ),
-        'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\' => 
+        'srag\\CustomInputGUIs\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/custominputguis/src',
         ),
@@ -110,6 +111,7 @@ class ComposerStaticInit5efeb17eb25d8cb66b013b687eab8b27
         'srag\\DIC\\SrRestoreRoleTemplates\\Database\\PdoStatementContextHelper' => __DIR__ . '/..' . '/srag/dic/src/Database/PdoStatementContextHelper.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\DevTools\\DevToolsCtrl' => __DIR__ . '/..' . '/srag/dic/src/DevTools/class.DevToolsCtrl.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\Exception\\DICException' => __DIR__ . '/..' . '/srag/dic/src/Exception/DICException.php',
+        'srag\\DIC\\SrRestoreRoleTemplates\\Ilias7PreWarn' => __DIR__ . '/..' . '/srag/dic/src/Ilias7PreWarn.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\Loader\\AbstractLoaderDetector' => __DIR__ . '/..' . '/srag/dic/src/Loader/AbstractLoaderDetector.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\Output\\Output' => __DIR__ . '/..' . '/srag/dic/src/Output/Output.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\Output\\OutputInterface' => __DIR__ . '/..' . '/srag/dic/src/Output/OutputInterface.php',
@@ -145,9 +147,9 @@ class ComposerStaticInit5efeb17eb25d8cb66b013b687eab8b27
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit5efeb17eb25d8cb66b013b687eab8b27::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit5efeb17eb25d8cb66b013b687eab8b27::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit5efeb17eb25d8cb66b013b687eab8b27::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit8cf1720199af972954ebf6a3269191f8::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit8cf1720199af972954ebf6a3269191f8::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit8cf1720199af972954ebf6a3269191f8::$classMap;
 
         }, null, ClassLoader::class);
     }
