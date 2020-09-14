@@ -1,7 +1,7 @@
 {
   "name": "srag/plugins/srrestoreroletemplates",
   "description": "",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "ilias_plugin": {
     "id": "srresroltem",
     "name": "SrRestoreRoleTemplates",
@@ -42,7 +42,8 @@
       "classes/"
     ],
     "files": [
-      "vendor/srag/dic/src/PHPVersionChecker.php"
+      "vendor/srag/dic/src/PHPVersionChecker.php",
+      "vendor/srag/dic/src/Ilias7PreWarn.php"
     ]
   },
   "config": {
