@@ -80,7 +80,8 @@ SELECT ref_id
 FROM object_data
 INNER JOIN object_reference ON object_data.obj_id=object_reference.obj_id
 WHERE type=%s
-AND object_reference.deleted IS NULL', [ilDBConstants::T_TEXT], ["crs"]);
+AND object_reference.deleted IS NULL
+ORDER BY last_update DESC', [ilDBConstants::T_TEXT], ["crs"]);
 
         return array_map(function (array $object) : ilObject {
             return ilObjectFactory::getInstanceByRefId($object["ref_id"]);
