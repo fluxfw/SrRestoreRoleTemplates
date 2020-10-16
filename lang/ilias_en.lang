@@ -1,3 +1,7 @@
+config_configuration#:#Configuration
+config_configuration_saved#:#Configuration saved
+config_only_objects_from#:#Only objects from
+config_save#:#Save
 reapply_didactic_templates_description#:#Reapply didactic templates to objects
 reapply_didactic_templates_result#:#Objects : %1$s\nTemplates : %2$s
 reapply_didactic_templates_title#:#Reapply didactic templates

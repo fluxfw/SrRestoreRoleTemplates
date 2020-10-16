@@ -8,6 +8,7 @@ use ilObjectFactory;
 use ilObjRole;
 use ilSrRestoreRoleTemplatesPlugin;
 use srag\DIC\SrRestoreRoleTemplates\DICTrait;
+use srag\Plugins\SrRestoreRoleTemplates\Config\Form\FormBuilder;
 use srag\Plugins\SrRestoreRoleTemplates\Utils\SrRestoreRoleTemplatesTrait;
 
 /**
@@ -75,13 +76,25 @@ final class Repository
      */
     public function getObjects() : array
     {
-        $result = self::dic()->database()->queryF('
-SELECT ref_id
+        $query = 'SELECT ref_id
 FROM object_data
 INNER JOIN object_reference ON object_data.obj_id=object_reference.obj_id
 WHERE type=%s
-AND object_reference.deleted IS NULL
-ORDER BY last_update DESC', [ilDBConstants::T_TEXT], ["crs"]);
+AND object_reference.deleted IS NULL';
+        $types = [ilDBConstants::T_TEXT];
+        $values = ["crs"];
+
+        $only_objects_from = self::srRestoreRoleTemplates()->config()->getValue(FormBuilder::KEY_ONLY_OBJECTS_FROM);
+        if (!empty($only_objects_from)) {
+            $query .= ' AND last_update>=%s';
+            $types[] = ilDBConstants::T_TEXT;
+            $values[] = $only_objects_from;
+        }
+
+        $query .= '
+ORDER BY last_update DESC';
+
+        $result = self::dic()->database()->queryF($query, $types, $values);
 
         return array_map(function (array $object) : ilObject {
             return ilObjectFactory::getInstanceByRefId($object["ref_id"]);
