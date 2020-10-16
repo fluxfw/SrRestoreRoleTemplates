@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.0]
+- Process latest objects first
+- Only objects from config
+
 ## [1.0.4]
 - `Ilias7PreWarn`
 

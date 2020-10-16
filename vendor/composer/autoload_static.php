@@ -14,16 +14,17 @@ class ComposerStaticInit8cf1720199af972954ebf6a3269191f8
     public static $prefixLengthsPsr4 = array (
         's' => 
         array (
-            'srag\\RemovePluginDataConfirm\\' => 29,
+            'srag\\RemovePluginDataConfirm\\SrRestoreRoleTemplates\\' => 52,
             'srag\\Plugins\\SrRestoreRoleTemplates\\' => 36,
             'srag\\LibrariesNamespaceChanger\\' => 31,
-            'srag\\DIC\\' => 9,
-            'srag\\CustomInputGUIs\\' => 21,
+            'srag\\DIC\\SrRestoreRoleTemplates\\' => 32,
+            'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\' => 44,
+            'srag\\ActiveRecordConfig\\SrRestoreRoleTemplates\\' => 47,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'srag\\RemovePluginDataConfirm\\' => 
+        'srag\\RemovePluginDataConfirm\\SrRestoreRoleTemplates\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src',
         ),
@@ -35,19 +36,34 @@ class ComposerStaticInit8cf1720199af972954ebf6a3269191f8
         array (
             0 => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src',
         ),
-        'srag\\DIC\\' => 
+        'srag\\DIC\\SrRestoreRoleTemplates\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/dic/src',
         ),
-        'srag\\CustomInputGUIs\\' => 
+        'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/custominputguis/src',
+        ),
+        'srag\\ActiveRecordConfig\\SrRestoreRoleTemplates\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/srag/activerecordconfig/src',
         ),
     );
 
     public static $classMap = array (
         'ilSrRestoreRoleTemplatesConfigGUI' => __DIR__ . '/../..' . '/classes/class.ilSrRestoreRoleTemplatesConfigGUI.php',
         'ilSrRestoreRoleTemplatesPlugin' => __DIR__ . '/../..' . '/classes/class.ilSrRestoreRoleTemplatesPlugin.php',
+        'srag\\ActiveRecordConfig\\SrRestoreRoleTemplates\\ActiveRecordConfig' => __DIR__ . '/..' . '/srag/activerecordconfig/src/ActiveRecordConfig.php',
+        'srag\\ActiveRecordConfig\\SrRestoreRoleTemplates\\ActiveRecordConfigFactory' => __DIR__ . '/..' . '/srag/activerecordconfig/src/ActiveRecordConfig.php',
+        'srag\\ActiveRecordConfig\\SrRestoreRoleTemplates\\ActiveRecordConfigFormGUI' => __DIR__ . '/..' . '/srag/activerecordconfig/src/ActiveRecordConfigFormGUI.php',
+        'srag\\ActiveRecordConfig\\SrRestoreRoleTemplates\\ActiveRecordConfigGUI' => __DIR__ . '/..' . '/srag/activerecordconfig/src/ActiveRecordConfigGUI.php',
+        'srag\\ActiveRecordConfig\\SrRestoreRoleTemplates\\ActiveRecordConfigRepository' => __DIR__ . '/..' . '/srag/activerecordconfig/src/ActiveRecordConfig.php',
+        'srag\\ActiveRecordConfig\\SrRestoreRoleTemplates\\ActiveRecordConfigTableGUI' => __DIR__ . '/..' . '/srag/activerecordconfig/src/ActiveRecordConfigTableGUI.php',
+        'srag\\ActiveRecordConfig\\SrRestoreRoleTemplates\\ActiveRecordObjectFormGUI' => __DIR__ . '/..' . '/srag/activerecordconfig/src/ActiveRecordObjectFormGUI.php',
+        'srag\\ActiveRecordConfig\\SrRestoreRoleTemplates\\Config\\AbstractFactory' => __DIR__ . '/..' . '/srag/activerecordconfig/src/Config/AbstractFactory.php',
+        'srag\\ActiveRecordConfig\\SrRestoreRoleTemplates\\Config\\AbstractRepository' => __DIR__ . '/..' . '/srag/activerecordconfig/src/Config/AbstractRepository.php',
+        'srag\\ActiveRecordConfig\\SrRestoreRoleTemplates\\Config\\Config' => __DIR__ . '/..' . '/srag/activerecordconfig/src/Config/Config.php',
+        'srag\\ActiveRecordConfig\\SrRestoreRoleTemplates\\Exception\\ActiveRecordConfigException' => __DIR__ . '/..' . '/srag/activerecordconfig/src/Exception/ActiveRecordConfigException.php',
         'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\CheckboxInputGUI\\AjaxCheckbox' => __DIR__ . '/..' . '/srag/custominputguis/src/AjaxCheckbox/AjaxCheckbox.php',
         'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\CheckboxInputGUI\\CheckboxInputGUI' => __DIR__ . '/..' . '/srag/custominputguis/src/CheckboxInputGUI/CheckboxInputGUI.php',
         'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\ColorPickerInputGUI\\ColorPickerInputGUI' => __DIR__ . '/..' . '/srag/custominputguis/src/ColorPickerInputGUI/ColorPickerInputGUI.php',
@@ -94,7 +110,7 @@ class ComposerStaticInit8cf1720199af972954ebf6a3269191f8
         'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\TextInputGUI\\TextInputGUIWithModernAutoComplete' => __DIR__ . '/..' . '/srag/custominputguis/src/TextInputGUI/TextInputGUIWithModernAutoComplete.php',
         'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\UIInputComponentWrapperInputGUI\\UIInputComponentWrapperInputGUI' => __DIR__ . '/..' . '/srag/custominputguis/src/UIInputComponentWrapperInputGUI/UIInputComponentWrapperInputGUI.php',
         'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\UIInputComponentWrapperInputGUI\\UIInputComponentWrapperNameSource' => __DIR__ . '/..' . '/srag/custominputguis/src/UIInputComponentWrapperInputGUI/UIInputComponentWrapperNameSource.php',
-        'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\ViewControlModeUI\\ViewControlModeUI' => __DIR__ . '/..' . '/srag/custominputguis/src/ViewControlModeGUI/ViewControlModeUI.php',
+        'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\ViewControlModeUI\\ViewControlModeUI' => __DIR__ . '/..' . '/srag/custominputguis/src/ViewControlModeUI/ViewControlModeUI.php',
         'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\Waiter\\Waiter' => __DIR__ . '/..' . '/srag/custominputguis/src/Waiter/Waiter.php',
         'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\WeekdayInputGUI\\WeekdayInputGUI' => __DIR__ . '/..' . '/srag/custominputguis/src/WeekdayInputGUI/WeekdayInputGUI.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\DICStatic' => __DIR__ . '/..' . '/srag/dic/src/DICStatic.php',
@@ -128,6 +144,10 @@ class ComposerStaticInit8cf1720199af972954ebf6a3269191f8
         'srag\\LibrariesNamespaceChanger\\PHP7Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/PHP7Backport.php',
         'srag\\LibrariesNamespaceChanger\\RemovePHP72Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/RemovePHP72Backport.php',
         'srag\\LibrariesNamespaceChanger\\UpdatePluginReadme' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/UpdatePluginReadme.php',
+        'srag\\Plugins\\SrRestoreRoleTemplates\\Config\\ConfigCtrl' => __DIR__ . '/../..' . '/src/Config/class.ConfigCtrl.php',
+        'srag\\Plugins\\SrRestoreRoleTemplates\\Config\\Factory' => __DIR__ . '/../..' . '/src/Config/Factory.php',
+        'srag\\Plugins\\SrRestoreRoleTemplates\\Config\\Form\\FormBuilder' => __DIR__ . '/../..' . '/src/Config/Form/FormBuilder.php',
+        'srag\\Plugins\\SrRestoreRoleTemplates\\Config\\Repository' => __DIR__ . '/../..' . '/src/Config/Repository.php',
         'srag\\Plugins\\SrRestoreRoleTemplates\\Job\\Factory' => __DIR__ . '/../..' . '/src/Job/Factory.php',
         'srag\\Plugins\\SrRestoreRoleTemplates\\Job\\Repository' => __DIR__ . '/../..' . '/src/Job/Repository.php',
         'srag\\Plugins\\SrRestoreRoleTemplates\\ReapplyDidacticTemplates\\Factory' => __DIR__ . '/../..' . '/src/ReapplyDidacticTemplates/Factory.php',

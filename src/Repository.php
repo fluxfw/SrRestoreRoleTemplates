@@ -4,6 +4,7 @@ namespace srag\Plugins\SrRestoreRoleTemplates;
 
 use ilSrRestoreRoleTemplatesPlugin;
 use srag\DIC\SrRestoreRoleTemplates\DICTrait;
+use srag\Plugins\SrRestoreRoleTemplates\Config\Repository as ConfigRepository;
 use srag\Plugins\SrRestoreRoleTemplates\Job\Repository as JobsRepository;
 use srag\Plugins\SrRestoreRoleTemplates\ReapplyDidacticTemplates\Repository as ReapplyDidacticTemplatesRepository;
 use srag\Plugins\SrRestoreRoleTemplates\ReapplyRoleTemplates\Repository as ReapplyRoleTemplatesRepository;
@@ -52,10 +53,20 @@ final class Repository
 
 
     /**
+     * @return ConfigRepository
+     */
+    public function config() : ConfigRepository
+    {
+        return ConfigRepository::getInstance();
+    }
+
+
+    /**
      *
      */
     public function dropTables()/*:void*/
     {
+        $this->config()->dropTables();
         $this->jobs()->dropTables();
         $this->reapplyDidacticTemplates()->dropTables();
         $this->reapplyRoleTemplates()->dropTables();
@@ -67,6 +78,7 @@ final class Repository
      */
     public function installTables()/*:void*/
     {
+        $this->config()->installTables();
         $this->jobs()->installTables();
         $this->reapplyDidacticTemplates()->installTables();
         $this->reapplyRoleTemplates()->installTables();
