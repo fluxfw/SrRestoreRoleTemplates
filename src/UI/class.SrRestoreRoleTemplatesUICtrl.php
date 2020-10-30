@@ -2,13 +2,9 @@
 
 namespace srag\Plugins\SrRestoreRoleTemplates\UI;
 
+use ilLink;
 use ilObject;
 use ilObjectFactory;
-use ilObjectGUIFactory;
-use ilObjectPlugin;
-use ilObjPluginDispatchGUI;
-use ilPermissionGUI;
-use ilRepositoryGUI;
 use ilSrRestoreRoleTemplatesPlugin;
 use ilUIPluginRouterGUI;
 use ilUtil;
@@ -120,14 +116,7 @@ class SrRestoreRoleTemplatesUICtrl
      */
     protected function back()/* : void*/
     {
-        self::dic()->ctrl()->saveParameterByClass(ilPermissionGUI::class, self::GET_PARAM_REF_ID);
-
-        self::dic()->ctrl()->redirectToURL(self::dic()->ctrl()->getLinkTargetByClass([
-            ($this->obj instanceof ilObjectPlugin ? ilObjPluginDispatchGUI::class : ilRepositoryGUI::class),
-            get_class((new ilObjectGUIFactory())->getInstanceByRefId($this->obj_ref_id)),
-            ilPermissionGUI::class
-        ], "perm", "", false, false)
-        );
+        self::dic()->ctrl()->redirectToURL(ilLink::_getLink($this->obj_ref_id));
     }
 
 

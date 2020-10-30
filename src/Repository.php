@@ -81,7 +81,7 @@ final class Repository
      */
     public function hasAccess(int $user_id, int $obj_ref_id) : bool
     {
-        return (self::dic()->access()->checkAccessOfUser($user_id, "edit_permissions", "", $obj_ref_id));
+        return (self::dic()->access()->checkAccessOfUser($user_id, "write", "", $obj_ref_id));
     }
 
 
