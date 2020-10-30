@@ -4,6 +4,7 @@ namespace srag\Plugins\SrRestoreRoleTemplates\ReapplyDidacticTemplates;
 
 use ilCronJob;
 use ilCronJobResult;
+use ilObject;
 use ilSrRestoreRoleTemplatesPlugin;
 use srag\DIC\SrRestoreRoleTemplates\DICTrait;
 use srag\Plugins\SrRestoreRoleTemplates\Utils\SrRestoreRoleTemplatesTrait;
@@ -24,14 +25,24 @@ class ReapplyDidacticTemplatesJob extends ilCronJob
     const CRON_JOB_ID = ilSrRestoreRoleTemplatesPlugin::PLUGIN_ID . "_reapply_didactic_templates";
     const LANG_MODULE = "reapply_didactic_templates";
     const PLUGIN_CLASS_NAME = ilSrRestoreRoleTemplatesPlugin::class;
+    /**
+     * @var ilObject[]
+     */
+    protected $objects = [];
 
 
     /**
-     * Job constructor
+     * ReapplyDidacticTemplatesJob constructor
+     *
+     * @param ilObject[]|null $objects
      */
-    public function __construct()
+    public function __construct(/*?*/ array $objects = null)
     {
-
+        if (!empty($objects)) {
+            $this->objects = $objects;
+        } else {
+            $this->objects = self::srRestoreRoleTemplates()->reapplyDidacticTemplates()->getObjects();
+        }
     }
 
 
@@ -105,18 +116,16 @@ class ReapplyDidacticTemplatesJob extends ilCronJob
     {
         $result = new ilCronJobResult();
 
-        $objects = self::srRestoreRoleTemplates()->reapplyDidacticTemplates()->getObjects();
-
         $count_templates = 0;
 
-        foreach ($objects as $obj) {
+        foreach ($this->objects as $obj) {
             $count_templates += self::srRestoreRoleTemplates()->reapplyDidacticTemplates()->reapplyDidacticTemplates($obj);
         }
 
         $result->setStatus(ilCronJobResult::STATUS_OK);
 
         $result->setMessage(nl2br(self::plugin()->translate("result", self::LANG_MODULE, [
-            count($objects),
+            count($this->objects),
             $count_templates
         ]), false));
 

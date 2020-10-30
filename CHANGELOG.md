@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.0.0]
+- Run jobs manuelly per object
+
 ## [1.1.0]
 - Process latest objects first
 - Only objects from config

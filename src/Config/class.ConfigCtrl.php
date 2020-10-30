@@ -82,7 +82,7 @@ class ConfigCtrl
     {
         self::dic()->tabs()->activateTab(self::TAB_CONFIGURATION);
 
-        $form = self::SrRestoreRoleTemplates()->config()->factory()->newFormBuilderInstance($this);
+        $form = self::srRestoreRoleTemplates()->config()->factory()->newFormBuilderInstance($this);
 
         self::output()->output($form);
     }
@@ -104,7 +104,7 @@ class ConfigCtrl
     {
         self::dic()->tabs()->activateTab(self::TAB_CONFIGURATION);
 
-        $form = self::SrRestoreRoleTemplates()->config()->factory()->newFormBuilderInstance($this);
+        $form = self::srRestoreRoleTemplates()->config()->factory()->newFormBuilderInstance($this);
 
         if (!$form->storeForm()) {
             self::output()->output($form);

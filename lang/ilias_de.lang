@@ -8,3 +8,4 @@ reapply_didactic_templates_title#:#Didaktische-Vorlagen erneut anwenden
 reapply_role_templates_description#:#Role-Vorlagen erneut auf Objekte anwenden
 reapply_role_templates_result#:#Objekte : %1$s\nRollen : %2$s
 reapply_role_templates_title#:#Role-Vorlagen erneut anwenden
+ui_restore_templates#:#Vorlagen wiederherstellen
