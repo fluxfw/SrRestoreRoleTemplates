@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.1.0]
+- Allow access ui for write permissions
+- Add tab in settings tab too for some object types
+
 ## [2.0.0]
 - Run jobs manuelly per object
 
