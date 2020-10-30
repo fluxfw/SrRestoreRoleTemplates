@@ -74,6 +74,18 @@ final class Repository
 
 
     /**
+     * @param int $user_id
+     * @param int $obj_ref_id
+     *
+     * @return bool
+     */
+    public function hasAccess(int $user_id, int $obj_ref_id) : bool
+    {
+        return (self::dic()->access()->checkAccessOfUser($user_id, "edit_permissions", "", $obj_ref_id));
+    }
+
+
+    /**
      *
      */
     public function installTables()/*:void*/

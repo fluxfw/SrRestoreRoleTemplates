@@ -18,7 +18,7 @@ class ComposerStaticInit8cf1720199af972954ebf6a3269191f8
             'srag\\Plugins\\SrRestoreRoleTemplates\\' => 36,
             'srag\\LibrariesNamespaceChanger\\' => 31,
             'srag\\DIC\\SrRestoreRoleTemplates\\' => 32,
-            'srag\\CustomInputGUIs\\' => 21,
+            'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\' => 44,
             'srag\\ActiveRecordConfig\\SrRestoreRoleTemplates\\' => 47,
         ),
     );
@@ -40,7 +40,7 @@ class ComposerStaticInit8cf1720199af972954ebf6a3269191f8
         array (
             0 => __DIR__ . '/..' . '/srag/dic/src',
         ),
-        'srag\\CustomInputGUIs\\' => 
+        'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/custominputguis/src',
         ),
@@ -158,6 +158,7 @@ class ComposerStaticInit8cf1720199af972954ebf6a3269191f8
         'srag\\Plugins\\SrRestoreRoleTemplates\\ReapplyRoleTemplates\\ReapplyRoleTemplatesJob' => __DIR__ . '/../..' . '/src/ReapplyRoleTemplates/ReapplyRoleTemplatesJob.php',
         'srag\\Plugins\\SrRestoreRoleTemplates\\ReapplyRoleTemplates\\Repository' => __DIR__ . '/../..' . '/src/ReapplyRoleTemplates/Repository.php',
         'srag\\Plugins\\SrRestoreRoleTemplates\\Repository' => __DIR__ . '/../..' . '/src/Repository.php',
+        'srag\\Plugins\\SrRestoreRoleTemplates\\UI\\SrRestoreRoleTemplatesUICtrl' => __DIR__ . '/../..' . '/src/UI/class.SrRestoreRoleTemplatesUICtrl.php',
         'srag\\Plugins\\SrRestoreRoleTemplates\\Utils\\SrRestoreRoleTemplatesTrait' => __DIR__ . '/../..' . '/src/Utils/SrRestoreRoleTemplatesTrait.php',
         'srag\\RemovePluginDataConfirm\\SrRestoreRoleTemplates\\BasePluginUninstallTrait' => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src/BasePluginUninstallTrait.php',
         'srag\\RemovePluginDataConfirm\\SrRestoreRoleTemplates\\PluginUninstallTrait' => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src/PluginUninstallTrait.php',

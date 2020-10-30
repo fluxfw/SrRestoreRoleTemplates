@@ -24,6 +24,7 @@ final class Repository
     use DICTrait;
     use SrRestoreRoleTemplatesTrait;
 
+    const OBJECT_TYPES = ["crs"];
     const PLUGIN_CLASS_NAME = ilSrRestoreRoleTemplatesPlugin::class;
     /**
      * @var self|null
@@ -79,10 +80,10 @@ final class Repository
         $query = 'SELECT ref_id
 FROM object_data
 INNER JOIN object_reference ON object_data.obj_id=object_reference.obj_id
-WHERE type=%s
+WHERE ' . self::dic()->database()->in("type", self::OBJECT_TYPES, false, ilDBConstants::T_TEXT) . '
 AND object_reference.deleted IS NULL';
-        $types = [ilDBConstants::T_TEXT];
-        $values = ["crs"];
+        $types = [];
+        $values = [];
 
         $only_objects_from = self::srRestoreRoleTemplates()->config()->getValue(FormBuilder::KEY_ONLY_OBJECTS_FROM);
         if (!empty($only_objects_from)) {

@@ -2,6 +2,7 @@
 
 namespace srag\Plugins\SrRestoreRoleTemplates\ReapplyRoleTemplates;
 
+use ilObject;
 use ilSrRestoreRoleTemplatesPlugin;
 use srag\DIC\SrRestoreRoleTemplates\DICTrait;
 use srag\Plugins\SrRestoreRoleTemplates\Utils\SrRestoreRoleTemplatesTrait;
@@ -49,11 +50,13 @@ final class Factory
 
 
     /**
+     * @param ilObject[]|null $objects
+     *
      * @return ReapplyRoleTemplatesJob
      */
-    public function newJobInstance() : ReapplyRoleTemplatesJob
+    public function newJobInstance(/*?*/ array $objects = null) : ReapplyRoleTemplatesJob
     {
-        $job = new ReapplyRoleTemplatesJob();
+        $job = new ReapplyRoleTemplatesJob($objects);
 
         return $job;
     }

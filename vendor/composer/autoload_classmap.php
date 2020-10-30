@@ -113,6 +113,7 @@ return array(
     'srag\\Plugins\\SrRestoreRoleTemplates\\ReapplyRoleTemplates\\ReapplyRoleTemplatesJob' => $baseDir . '/src/ReapplyRoleTemplates/ReapplyRoleTemplatesJob.php',
     'srag\\Plugins\\SrRestoreRoleTemplates\\ReapplyRoleTemplates\\Repository' => $baseDir . '/src/ReapplyRoleTemplates/Repository.php',
     'srag\\Plugins\\SrRestoreRoleTemplates\\Repository' => $baseDir . '/src/Repository.php',
+    'srag\\Plugins\\SrRestoreRoleTemplates\\UI\\SrRestoreRoleTemplatesUICtrl' => $baseDir . '/src/UI/class.SrRestoreRoleTemplatesUICtrl.php',
     'srag\\Plugins\\SrRestoreRoleTemplates\\Utils\\SrRestoreRoleTemplatesTrait' => $baseDir . '/src/Utils/SrRestoreRoleTemplatesTrait.php',
     'srag\\RemovePluginDataConfirm\\SrRestoreRoleTemplates\\BasePluginUninstallTrait' => $vendorDir . '/srag/removeplugindataconfirm/src/BasePluginUninstallTrait.php',
     'srag\\RemovePluginDataConfirm\\SrRestoreRoleTemplates\\PluginUninstallTrait' => $vendorDir . '/srag/removeplugindataconfirm/src/PluginUninstallTrait.php',
