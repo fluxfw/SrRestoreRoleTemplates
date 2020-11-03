@@ -2,7 +2,7 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
-use srag\DIC\SrRestoreRoleTemplates\DevTools\DevToolsCtrl;
+use srag\DevTools\SrRestoreRoleTemplates\DevToolsCtrl;
 use srag\DIC\SrRestoreRoleTemplates\DICTrait;
 use srag\Plugins\SrRestoreRoleTemplates\Config\ConfigCtrl;
 use srag\Plugins\SrRestoreRoleTemplates\Utils\SrRestoreRoleTemplatesTrait;
@@ -12,7 +12,7 @@ use srag\Plugins\SrRestoreRoleTemplates\Utils\SrRestoreRoleTemplatesTrait;
  *
  * @author            studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  *
- * @ilCtrl_isCalledBy srag\DIC\SrRestoreRoleTemplates\DevTools\DevToolsCtrl: ilSrRestoreRoleTemplatesConfigGUI
+ * @ilCtrl_isCalledBy srag\DevTools\SrRestoreRoleTemplates\DevToolsCtrl: ilSrRestoreRoleTemplatesConfigGUI
  */
 class ilSrRestoreRoleTemplatesConfigGUI extends ilPluginConfigGUI
 {
