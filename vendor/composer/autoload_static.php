@@ -17,7 +17,8 @@ class ComposerStaticInit8cf1720199af972954ebf6a3269191f8
             'srag\\RemovePluginDataConfirm\\SrRestoreRoleTemplates\\' => 52,
             'srag\\Plugins\\SrRestoreRoleTemplates\\' => 36,
             'srag\\LibrariesNamespaceChanger\\' => 31,
-            'srag\\DevTools\\' => 14,
+            'srag\\GeneratePluginInfosHelper\\SrRestoreRoleTemplates\\' => 54,
+            'srag\\DevTools\\SrRestoreRoleTemplates\\' => 37,
             'srag\\DIC\\SrRestoreRoleTemplates\\' => 32,
             'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\' => 44,
             'srag\\ActiveRecordConfig\\SrRestoreRoleTemplates\\' => 47,
@@ -37,7 +38,11 @@ class ComposerStaticInit8cf1720199af972954ebf6a3269191f8
         array (
             0 => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src',
         ),
-        'srag\\DevTools\\' => 
+        'srag\\GeneratePluginInfosHelper\\SrRestoreRoleTemplates\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/srag/generateplugininfoshelper/src',
+        ),
+        'srag\\DevTools\\SrRestoreRoleTemplates\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/devtools/src',
         ),
@@ -144,6 +149,9 @@ class ComposerStaticInit8cf1720199af972954ebf6a3269191f8
         'srag\\DIC\\SrRestoreRoleTemplates\\Version\\Version' => __DIR__ . '/..' . '/srag/dic/src/Version/Version.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\Version\\VersionInterface' => __DIR__ . '/..' . '/srag/dic/src/Version/VersionInterface.php',
         'srag\\DevTools\\SrRestoreRoleTemplates\\DevToolsCtrl' => __DIR__ . '/..' . '/srag/devtools/src/class.DevToolsCtrl.php',
+        'srag\\GeneratePluginInfosHelper\\SrRestoreRoleTemplates\\GeneratePluginPhpAndXml' => __DIR__ . '/..' . '/srag/generateplugininfoshelper/src/GeneratePluginPhpAndXml.php',
+        'srag\\GeneratePluginInfosHelper\\SrRestoreRoleTemplates\\GeneratePluginReadme' => __DIR__ . '/..' . '/srag/generateplugininfoshelper/src/GeneratePluginReadme.php',
+        'srag\\GeneratePluginInfosHelper\\SrRestoreRoleTemplates\\UpdatePluginReadme' => __DIR__ . '/..' . '/srag/generateplugininfoshelper/src/UpdatePluginReadme.php',
         'srag\\LibrariesNamespaceChanger\\GeneratePluginPhpAndXml' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/GeneratePluginPhpAndXml.php',
         'srag\\LibrariesNamespaceChanger\\GeneratePluginReadme' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/GeneratePluginReadme.php',
         'srag\\LibrariesNamespaceChanger\\LibrariesNamespaceChanger' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/LibrariesNamespaceChanger.php',
