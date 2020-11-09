@@ -9,7 +9,7 @@ use ilPluginConfigGUI;
 use ilUtil;
 use srag\DIC\SrRestoreRoleTemplates\DICTrait;
 use srag\DIC\SrRestoreRoleTemplates\Plugin\PluginInterface;
-use srag\DIC\SrRestoreRoleTemplates\Util\LibraryLanguageInstaller;
+use srag\LibraryLanguageInstaller\SrRestoreRoleTemplates\LibraryLanguageInstaller;
 
 /**
  * Class DevToolsCtrl
