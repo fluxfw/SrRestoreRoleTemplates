@@ -12,7 +12,7 @@ return array(
     'srag\\LibrariesNamespaceChanger\\' => array($vendorDir . '/srag/librariesnamespacechanger/src'),
     'srag\\GeneratePluginInfosHelper\\SrRestoreRoleTemplates\\' => array($vendorDir . '/srag/generateplugininfoshelper/src'),
     'srag\\DevTools\\SrRestoreRoleTemplates\\' => array($vendorDir . '/srag/devtools/src'),
-    'srag\\DIC\\' => array($vendorDir . '/srag/dic/src'),
+    'srag\\DIC\\SrRestoreRoleTemplates\\' => array($vendorDir . '/srag/dic/src'),
     'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\' => array($vendorDir . '/srag/custominputguis/src'),
     'srag\\ActiveRecordConfig\\SrRestoreRoleTemplates\\' => array($vendorDir . '/srag/activerecordconfig/src'),
 );
