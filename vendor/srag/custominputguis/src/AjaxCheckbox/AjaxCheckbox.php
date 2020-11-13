@@ -1,6 +1,6 @@
 <?php
 
-namespace srag\CustomInputGUIs\SrRestoreRoleTemplates\CheckboxInputGUI;
+namespace srag\CustomInputGUIs\SrRestoreRoleTemplates\AjaxCheckbox;
 
 use srag\CustomInputGUIs\SrRestoreRoleTemplates\Template\Template;
 use srag\CustomInputGUIs\SrRestoreRoleTemplates\Waiter\Waiter;
@@ -9,7 +9,7 @@ use srag\DIC\SrRestoreRoleTemplates\DICTrait;
 /**
  * Class AjaxCheckbox
  *
- * @package srag\CustomInputGUIs\SrRestoreRoleTemplates\CheckboxInputGUI
+ * @package srag\CustomInputGUIs\SrRestoreRoleTemplates\AjaxCheckbox
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */

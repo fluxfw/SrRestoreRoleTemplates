@@ -1,5 +1,5 @@
 {
-  "name": "srag/plugins/srrestoreroletemplates",
+  "name": "srag/srrestoreroletemplates",
   "description": "",
   "version": "2.1.0",
   "extra": {
@@ -45,7 +45,9 @@
       "srag\\Plugins\\SrRestoreRoleTemplates\\": "src/"
     },
     "classmap": [
-      "classes/"
+      "classes/",
+      "src/Config/class.ConfigCtrl.php",
+      "src/UI/class.SrRestoreRoleTemplatesUICtrl.php"
     ],
     "files": [
       "vendor/srag/dic/src/PHPVersionChecker.php",

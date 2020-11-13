@@ -8,6 +8,11 @@ This is an OpenSource project by studer + raimann ag, CH-Burgdorf (https://stude
 
 This project is licensed under the GPL-3.0-only license
 
+## Requirements
+
+* ILIAS 5.4.0 - 6.999
+* PHP >=7.0
+
 ## Installation
 
 Start at your ILIAS root directory
@@ -30,11 +35,6 @@ This plugin has the follow cron jobs:
 ![Cron jobs](./doc/images/cron_jobs.png)
 
 You can also run the jobs manuelly per object by using the [SrRestoreRoleTemplatesUI](https://github.com/studer-raimann/SrRestoreRoleTemplatesUI) plugin
-
-## Requirements
-
-* ILIAS 5.4.0 - 6.999
-* PHP >=7.0
 
 ## Adjustment suggestions
 
