@@ -1,7 +1,7 @@
 {
   "name": "srag/srrestoreroletemplates",
   "description": "",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "extra": {
     "ilias_plugin": {
       "id": "srresroltem",

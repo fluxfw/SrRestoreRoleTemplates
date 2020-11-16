@@ -6,6 +6,7 @@ use ilDBConstants;
 use ilDidacticTemplateObjSettings;
 use ilObject;
 use ilObjectFactory;
+use ilObjectPlugin;
 use ilSrRestoreRoleTemplatesPlugin;
 use srag\DIC\SrRestoreRoleTemplates\DICTrait;
 use srag\Plugins\SrRestoreRoleTemplates\Config\Form\FormBuilder;
@@ -76,7 +77,7 @@ final class Repository
      */
     public function getObjects() : array
     {
-        $query = 'SELECT ref_id
+        $query = 'SELECT ref_id, type
 FROM object_data
 INNER JOIN object_reference ON object_data.obj_id=object_reference.obj_id
 WHERE object_reference.deleted IS NULL';
@@ -96,8 +97,20 @@ ORDER BY last_update DESC';
         $result = self::dic()->database()->queryF($query, $types, $values);
 
         return array_map(function (array $object) : ilObject {
-            return ilObjectFactory::getInstanceByRefId($object["ref_id"]);
-        }, self::dic()->database()->fetchAll($result));
+            return ilObjectFactory::getInstanceByRefId($object["ref_id"], false);
+        }, array_filter(self::dic()->database()->fetchAll($result), function (array $object) : bool {
+            if (self::dic()->objDefinition()->isPluginTypeName($object["type"])) {
+                $plugin_object = ilObjectPlugin::getPluginObjectByType($object["type"]);
+
+                if ($plugin_object === null) {
+                    return false;
+                }
+
+                return $plugin_object->isActive();
+            } else {
+                return true;
+            }
+        }));
     }
 
 
