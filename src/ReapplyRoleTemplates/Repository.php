@@ -98,7 +98,7 @@ ORDER BY last_update DESC';
         $result = self::dic()->database()->queryF($query, $types, $values);
 
         return array_map(function (array $object) : ilObject {
-            return ilObjectFactory::getInstanceByRefId($object["ref_id"]);
+            return ilObjectFactory::getInstanceByRefId($object["ref_id"], false);
         }, self::dic()->database()->fetchAll($result));
     }
 

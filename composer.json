@@ -1,7 +1,7 @@
 {
-  "name": "srag/plugins/srrestoreroletemplates",
+  "name": "srag/srrestoreroletemplates",
   "description": "",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "extra": {
     "ilias_plugin": {
       "id": "srresroltem",
@@ -9,7 +9,8 @@
       "ilias_min_version": "5.4.0",
       "ilias_max_version": "6.999",
       "slot": "Services/Cron/CronHook"
-    }
+    },
+    "generate_plugin_readme_template": "SRAG_ILIAS_PLUGIN"
   },
   "type": "project",
   "keywords": [
@@ -33,7 +34,9 @@
     "php": ">=7.0",
     "srag/activerecordconfig": ">=0.1.0",
     "srag/custominputguis": ">=0.1.0",
+    "srag/devtools": ">=0.1.0",
     "srag/dic": ">=0.1.0",
+    "srag/generateplugininfoshelper": ">=0.1.0",
     "srag/librariesnamespacechanger": ">=0.1.0",
     "srag/removeplugindataconfirm": ">=0.1.0"
   },
@@ -42,7 +45,9 @@
       "srag\\Plugins\\SrRestoreRoleTemplates\\": "src/"
     },
     "classmap": [
-      "classes/"
+      "classes/",
+      "src/Config/class.ConfigCtrl.php",
+      "src/UI/class.SrRestoreRoleTemplatesUICtrl.php"
     ],
     "files": [
       "vendor/srag/dic/src/PHPVersionChecker.php",
@@ -58,8 +63,8 @@
     "pre-autoload-dump": [
       "srag\\LibrariesNamespaceChanger\\LibrariesNamespaceChanger::rewriteLibrariesNamespaces",
       "srag\\LibrariesNamespaceChanger\\PHP72Backport::PHP72Backport",
-      "srag\\LibrariesNamespaceChanger\\GeneratePluginPhpAndXml::generatePluginPhpAndXml",
-      "srag\\LibrariesNamespaceChanger\\GeneratePluginReadme::generatePluginReadme"
+      "srag\\GeneratePluginInfosHelper\\SrRestoreRoleTemplates\\GeneratePluginPhpAndXml::generatePluginPhpAndXml",
+      "srag\\GeneratePluginInfosHelper\\SrRestoreRoleTemplates\\GeneratePluginReadme::generatePluginReadme"
     ]
   }
 }

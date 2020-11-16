@@ -4,7 +4,7 @@ namespace srag\RemovePluginDataConfirm\SrRestoreRoleTemplates;
 
 use ilUIPluginRouterGUI;
 use srag\DIC\SrRestoreRoleTemplates\DICTrait;
-use srag\DIC\SrRestoreRoleTemplates\Util\LibraryLanguageInstaller;
+use srag\LibraryLanguageInstaller\SrRestoreRoleTemplates\LibraryLanguageInstaller;
 
 /**
  * Trait BasePluginUninstallTrait

@@ -7,8 +7,8 @@ namespace Composer\Autoload;
 class ComposerStaticInit8cf1720199af972954ebf6a3269191f8
 {
     public static $files = array (
-        '7b9e7e18202e6aa0aa27ed7be02f2944' => __DIR__ . '/..' . '/srag/dic/src/PHPVersionChecker.php',
-        '264bf9a468ebd3de4ba2d172857e6ce2' => __DIR__ . '/..' . '/srag/dic/src/Ilias7PreWarn.php',
+        'e744f461f71a321daeb865c0b2aac7e8' => __DIR__ . '/..' . '/srag/dic/src/PHPVersionChecker.php',
+        '501642243a556460b9f375e2678ab4e3' => __DIR__ . '/..' . '/srag/dic/src/Ilias7PreWarn.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -16,7 +16,10 @@ class ComposerStaticInit8cf1720199af972954ebf6a3269191f8
         array (
             'srag\\RemovePluginDataConfirm\\SrRestoreRoleTemplates\\' => 52,
             'srag\\Plugins\\SrRestoreRoleTemplates\\' => 36,
+            'srag\\LibraryLanguageInstaller\\SrRestoreRoleTemplates\\' => 53,
             'srag\\LibrariesNamespaceChanger\\' => 31,
+            'srag\\GeneratePluginInfosHelper\\SrRestoreRoleTemplates\\' => 54,
+            'srag\\DevTools\\SrRestoreRoleTemplates\\' => 37,
             'srag\\DIC\\SrRestoreRoleTemplates\\' => 32,
             'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\' => 44,
             'srag\\ActiveRecordConfig\\SrRestoreRoleTemplates\\' => 47,
@@ -32,9 +35,21 @@ class ComposerStaticInit8cf1720199af972954ebf6a3269191f8
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
+        'srag\\LibraryLanguageInstaller\\SrRestoreRoleTemplates\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/srag/librarylanguageinstaller/src',
+        ),
         'srag\\LibrariesNamespaceChanger\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src',
+        ),
+        'srag\\GeneratePluginInfosHelper\\SrRestoreRoleTemplates\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/srag/generateplugininfoshelper/src',
+        ),
+        'srag\\DevTools\\SrRestoreRoleTemplates\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/srag/devtools/src',
         ),
         'srag\\DIC\\SrRestoreRoleTemplates\\' => 
         array (
@@ -64,7 +79,7 @@ class ComposerStaticInit8cf1720199af972954ebf6a3269191f8
         'srag\\ActiveRecordConfig\\SrRestoreRoleTemplates\\Config\\AbstractRepository' => __DIR__ . '/..' . '/srag/activerecordconfig/src/Config/AbstractRepository.php',
         'srag\\ActiveRecordConfig\\SrRestoreRoleTemplates\\Config\\Config' => __DIR__ . '/..' . '/srag/activerecordconfig/src/Config/Config.php',
         'srag\\ActiveRecordConfig\\SrRestoreRoleTemplates\\Exception\\ActiveRecordConfigException' => __DIR__ . '/..' . '/srag/activerecordconfig/src/Exception/ActiveRecordConfigException.php',
-        'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\CheckboxInputGUI\\AjaxCheckbox' => __DIR__ . '/..' . '/srag/custominputguis/src/AjaxCheckbox/AjaxCheckbox.php',
+        'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\AjaxCheckbox\\AjaxCheckbox' => __DIR__ . '/..' . '/srag/custominputguis/src/AjaxCheckbox/AjaxCheckbox.php',
         'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\CheckboxInputGUI\\CheckboxInputGUI' => __DIR__ . '/..' . '/srag/custominputguis/src/CheckboxInputGUI/CheckboxInputGUI.php',
         'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\ColorPickerInputGUI\\ColorPickerInputGUI' => __DIR__ . '/..' . '/srag/custominputguis/src/ColorPickerInputGUI/ColorPickerInputGUI.php',
         'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\CustomInputGUIs' => __DIR__ . '/..' . '/srag/custominputguis/src/CustomInputGUIs.php',
@@ -125,7 +140,6 @@ class ComposerStaticInit8cf1720199af972954ebf6a3269191f8
         'srag\\DIC\\SrRestoreRoleTemplates\\Database\\DatabaseInterface' => __DIR__ . '/..' . '/srag/dic/src/Database/DatabaseInterface.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\Database\\PdoContextHelper' => __DIR__ . '/..' . '/srag/dic/src/Database/PdoContextHelper.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\Database\\PdoStatementContextHelper' => __DIR__ . '/..' . '/srag/dic/src/Database/PdoStatementContextHelper.php',
-        'srag\\DIC\\SrRestoreRoleTemplates\\DevTools\\DevToolsCtrl' => __DIR__ . '/..' . '/srag/dic/src/DevTools/class.DevToolsCtrl.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\Exception\\DICException' => __DIR__ . '/..' . '/srag/dic/src/Exception/DICException.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\Ilias7PreWarn' => __DIR__ . '/..' . '/srag/dic/src/Ilias7PreWarn.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\Loader\\AbstractLoaderDetector' => __DIR__ . '/..' . '/srag/dic/src/Loader/AbstractLoaderDetector.php',
@@ -135,16 +149,16 @@ class ComposerStaticInit8cf1720199af972954ebf6a3269191f8
         'srag\\DIC\\SrRestoreRoleTemplates\\Plugin\\Plugin' => __DIR__ . '/..' . '/srag/dic/src/Plugin/Plugin.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\Plugin\\PluginInterface' => __DIR__ . '/..' . '/srag/dic/src/Plugin/PluginInterface.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\Plugin\\Pluginable' => __DIR__ . '/..' . '/srag/dic/src/Plugin/Pluginable.php',
-        'srag\\DIC\\SrRestoreRoleTemplates\\Util\\LibraryLanguageInstaller' => __DIR__ . '/..' . '/srag/dic/src/Util/LibraryLanguageInstaller.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\Version\\Version' => __DIR__ . '/..' . '/srag/dic/src/Version/Version.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\Version\\VersionInterface' => __DIR__ . '/..' . '/srag/dic/src/Version/VersionInterface.php',
-        'srag\\LibrariesNamespaceChanger\\GeneratePluginPhpAndXml' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/GeneratePluginPhpAndXml.php',
-        'srag\\LibrariesNamespaceChanger\\GeneratePluginReadme' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/GeneratePluginReadme.php',
+        'srag\\DevTools\\SrRestoreRoleTemplates\\DevToolsCtrl' => __DIR__ . '/..' . '/srag/devtools/src/class.DevToolsCtrl.php',
+        'srag\\GeneratePluginInfosHelper\\SrRestoreRoleTemplates\\GeneratePluginPhpAndXml' => __DIR__ . '/..' . '/srag/generateplugininfoshelper/src/GeneratePluginPhpAndXml.php',
+        'srag\\GeneratePluginInfosHelper\\SrRestoreRoleTemplates\\GeneratePluginReadme' => __DIR__ . '/..' . '/srag/generateplugininfoshelper/src/GeneratePluginReadme.php',
         'srag\\LibrariesNamespaceChanger\\LibrariesNamespaceChanger' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/LibrariesNamespaceChanger.php',
         'srag\\LibrariesNamespaceChanger\\PHP72Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/PHP72Backport.php',
         'srag\\LibrariesNamespaceChanger\\PHP7Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/PHP7Backport.php',
         'srag\\LibrariesNamespaceChanger\\RemovePHP72Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/RemovePHP72Backport.php',
-        'srag\\LibrariesNamespaceChanger\\UpdatePluginReadme' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/UpdatePluginReadme.php',
+        'srag\\LibraryLanguageInstaller\\SrRestoreRoleTemplates\\LibraryLanguageInstaller' => __DIR__ . '/..' . '/srag/librarylanguageinstaller/src/LibraryLanguageInstaller.php',
         'srag\\Plugins\\SrRestoreRoleTemplates\\Config\\ConfigCtrl' => __DIR__ . '/../..' . '/src/Config/class.ConfigCtrl.php',
         'srag\\Plugins\\SrRestoreRoleTemplates\\Config\\Factory' => __DIR__ . '/../..' . '/src/Config/Factory.php',
         'srag\\Plugins\\SrRestoreRoleTemplates\\Config\\Form\\FormBuilder' => __DIR__ . '/../..' . '/src/Config/Form/FormBuilder.php',

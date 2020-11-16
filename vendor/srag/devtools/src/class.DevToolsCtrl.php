@@ -1,6 +1,6 @@
 <?php
 
-namespace srag\DIC\SrRestoreRoleTemplates\DevTools;
+namespace srag\DevTools\SrRestoreRoleTemplates;
 
 use ilAdministrationGUI;
 use ilDBConstants;
@@ -9,12 +9,12 @@ use ilPluginConfigGUI;
 use ilUtil;
 use srag\DIC\SrRestoreRoleTemplates\DICTrait;
 use srag\DIC\SrRestoreRoleTemplates\Plugin\PluginInterface;
-use srag\DIC\SrRestoreRoleTemplates\Util\LibraryLanguageInstaller;
+use srag\LibraryLanguageInstaller\SrRestoreRoleTemplates\LibraryLanguageInstaller;
 
 /**
  * Class DevToolsCtrl
  *
- * @package srag\DIC\SrRestoreRoleTemplates\DevTools
+ * @package srag\DevTools\SrRestoreRoleTemplates
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
@@ -69,7 +69,7 @@ class DevToolsCtrl
      */
     public static function installLanguages(PluginInterface $plugin)/*:void*/
     {
-        LibraryLanguageInstaller::getInstance()->withPlugin($plugin)->withLibraryLanguageDirectory(__DIR__ . "/lang")->updateLanguages();
+        LibraryLanguageInstaller::getInstance()->withPlugin($plugin)->withLibraryLanguageDirectory(__DIR__ . "/../lang")->updateLanguages();
     }
 
 

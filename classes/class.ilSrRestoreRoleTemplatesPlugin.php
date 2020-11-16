@@ -4,7 +4,7 @@ require_once __DIR__ . "/../vendor/autoload.php";
 
 use ILIAS\DI\Container;
 use srag\CustomInputGUIs\SrRestoreRoleTemplates\Loader\CustomInputGUIsLoaderDetector;
-use srag\DIC\SrRestoreRoleTemplates\DevTools\DevToolsCtrl;
+use srag\DevTools\SrRestoreRoleTemplates\DevToolsCtrl;
 use srag\Plugins\SrRestoreRoleTemplates\Utils\SrRestoreRoleTemplatesTrait;
 use srag\RemovePluginDataConfirm\SrRestoreRoleTemplates\PluginUninstallTrait;
 

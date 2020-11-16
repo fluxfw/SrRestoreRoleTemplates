@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.1.1]
+- Skip inactive plugin types
+
 ## [2.1.0]
 - Allow access ui for write permissions
 - Add tab in settings tab too for some object types

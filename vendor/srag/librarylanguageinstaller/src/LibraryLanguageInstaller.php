@@ -1,6 +1,6 @@
 <?php
 
-namespace srag\DIC\SrRestoreRoleTemplates\Util;
+namespace srag\LibraryLanguageInstaller\SrRestoreRoleTemplates;
 
 use ilDBConstants;
 use ilGlobalCache;
@@ -12,7 +12,7 @@ use srag\DIC\SrRestoreRoleTemplates\Plugin\PluginInterface;
 /**
  * Class LibraryLanguageInstaller
  *
- * @package srag\DIC\SrRestoreRoleTemplates\Util
+ * @package srag\LibraryLanguageInstaller\SrRestoreRoleTemplates
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
