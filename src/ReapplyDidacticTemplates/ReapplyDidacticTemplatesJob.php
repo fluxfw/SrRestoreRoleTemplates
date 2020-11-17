@@ -26,9 +26,9 @@ class ReapplyDidacticTemplatesJob extends ilCronJob
     const LANG_MODULE = "reapply_didactic_templates";
     const PLUGIN_CLASS_NAME = ilSrRestoreRoleTemplatesPlugin::class;
     /**
-     * @var ilObject[]
+     * @var ilObject[]|null
      */
-    protected $objects = [];
+    protected $objects = null;
 
 
     /**
@@ -38,11 +38,7 @@ class ReapplyDidacticTemplatesJob extends ilCronJob
      */
     public function __construct(/*?*/ array $objects = null)
     {
-        if (!empty($objects)) {
-            $this->objects = $objects;
-        } else {
-            $this->objects = self::srRestoreRoleTemplates()->reapplyDidacticTemplates()->getObjects();
-        }
+        $this->objects = $objects;
     }
 
 
@@ -118,7 +114,7 @@ class ReapplyDidacticTemplatesJob extends ilCronJob
 
         $count_templates = 0;
 
-        foreach ($this->objects as $obj) {
+        foreach ($this->getObjects() as $obj) {
             $count_templates += self::srRestoreRoleTemplates()->reapplyDidacticTemplates()->reapplyDidacticTemplates($obj);
         }
 
@@ -130,5 +126,18 @@ class ReapplyDidacticTemplatesJob extends ilCronJob
         ]), false));
 
         return $result;
+    }
+
+
+    /**
+     * @return ilObject[]
+     */
+    protected function getObjects() : array
+    {
+        if ($this->objects === null) {
+            $this->objects = self::srRestoreRoleTemplates()->reapplyDidacticTemplates()->getObjects();
+        }
+
+        return $this->objects;
     }
 }

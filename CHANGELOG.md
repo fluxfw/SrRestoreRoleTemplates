@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.1.2]
+- Not load objects on cron table
+
 ## [2.1.1]
 - Skip inactive plugin types
 

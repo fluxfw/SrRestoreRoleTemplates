@@ -26,9 +26,9 @@ class ReapplyRoleTemplatesJob extends ilCronJob
     const LANG_MODULE = "reapply_role_templates";
     const PLUGIN_CLASS_NAME = ilSrRestoreRoleTemplatesPlugin::class;
     /**
-     * @var ilObject[]
+     * @var ilObject[]|null
      */
-    protected $objects = [];
+    protected $objects = null;
 
 
     /**
@@ -38,11 +38,7 @@ class ReapplyRoleTemplatesJob extends ilCronJob
      */
     public function __construct(/*?*/ array $objects = null)
     {
-        if (!empty($objects)) {
-            $this->objects = $objects;
-        } else {
-            $this->objects = self::srRestoreRoleTemplates()->reapplyRoleTemplates()->getObjects();
-        }
+        $this->objects = $objects;
     }
 
 
@@ -118,7 +114,7 @@ class ReapplyRoleTemplatesJob extends ilCronJob
 
         $count_roles = 0;
 
-        foreach ($this->objects as $obj) {
+        foreach ($this->getObjects() as $obj) {
             $count_roles += self::srRestoreRoleTemplates()->reapplyRoleTemplates()->reapplyRoleTemplates($obj);
         }
 
@@ -130,5 +126,18 @@ class ReapplyRoleTemplatesJob extends ilCronJob
         ]), false));
 
         return $result;
+    }
+
+
+    /**
+     * @return ilObject[]
+     */
+    protected function getObjects() : array
+    {
+        if ($this->objects === null) {
+            $this->objects = self::srRestoreRoleTemplates()->reapplyRoleTemplates()->getObjects();
+        }
+
+        return $this->objects;
     }
 }
