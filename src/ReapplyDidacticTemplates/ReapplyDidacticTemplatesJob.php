@@ -4,6 +4,7 @@ namespace srag\Plugins\SrRestoreRoleTemplates\ReapplyDidacticTemplates;
 
 use ilCronJob;
 use ilCronJobResult;
+use ilCronManager;
 use ilObject;
 use ilSrRestoreRoleTemplatesPlugin;
 use srag\DIC\SrRestoreRoleTemplates\DICTrait;
@@ -116,6 +117,8 @@ class ReapplyDidacticTemplatesJob extends ilCronJob
 
         foreach ($this->getObjects() as $obj) {
             $count_templates += self::srRestoreRoleTemplates()->reapplyDidacticTemplates()->reapplyDidacticTemplates($obj);
+
+            ilCronManager::ping($this->getId());
         }
 
         $result->setStatus(ilCronJobResult::STATUS_OK);

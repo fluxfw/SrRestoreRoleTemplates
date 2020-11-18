@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.1.3]
+- Ping after each object for not ILIAS auto set inactive cron job if during longer
+
 ## [2.1.2]
 - Not load objects on cron table
 
