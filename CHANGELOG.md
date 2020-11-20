@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.1.4]
+- Improve translation for config
+- Update readme
+
 ## [2.1.3]
 - Ping after each object for not ILIAS auto set inactive cron job if during longer
 

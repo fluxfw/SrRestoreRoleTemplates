@@ -1,6 +1,6 @@
 config_configuration#:#Konfiguration
 config_configuration_saved#:#Konfiguration gespeichert
-config_only_objects_from#:#Nur Objekte vom
+config_only_objects_from#:#Nur Objekte erstellt ab dem
 config_save#:#Speichern
 reapply_didactic_templates_description#:#Didaktische-Vorlagen erneut auf Objekte anwenden
 reapply_didactic_templates_result#:#Objekte : %1$s\nVorlagen : %2$s
