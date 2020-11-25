@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.1.6]
+- Update readme
+
 ## [2.1.5]
 - Fix missing tpl ui in cron context used in some core object constructor
 
