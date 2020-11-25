@@ -2,7 +2,7 @@
 
 # SrRestoreRoleTemplates ILIAS Plugin
 
-Reapply didactic or role templates to objects
+Automatic reapply didactic or role templates to objects
 
 This is an OpenSource project by studer + raimann ag, CH-Burgdorf (https://studer-raimann.ch)
 
@@ -32,7 +32,7 @@ Update, activate and config the plugin in the ILIAS Plugin Administration
 This plugin has the follow cron jobs:
 
 - Reapply didactic templates to objects
-- Reapply role templates to objects
+- Reapply role templates to objects (Only for courses)
 
 ![Cron jobs](./doc/images/cron_jobs.png)
 

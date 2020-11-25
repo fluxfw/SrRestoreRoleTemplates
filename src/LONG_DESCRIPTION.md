@@ -3,7 +3,7 @@
 This plugin has the follow cron jobs:
 
 - Reapply didactic templates to objects
-- Reapply role templates to objects
+- Reapply role templates to objects (Only for courses)
 
 ![Cron jobs](../doc/images/cron_jobs.png)
 
