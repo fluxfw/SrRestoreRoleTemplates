@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e25e6fd8830314be5d029542bccd7495",
+    "content-hash": "605aa6f1a34651db0843bb3d85468aef",
     "packages": [
         {
             "name": "srag/activerecordconfig",
@@ -187,16 +187,16 @@
         },
         {
             "name": "srag/dic",
-            "version": "0.30.2",
+            "version": "0.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/studer-raimann/DIC.git",
-                "reference": "314c0a13a9e9970a012ca727148aa0ac148d50dd"
+                "reference": "de8dd1ff734ba8dc42178180dcdaee20058c10aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/studer-raimann/DIC/zipball/314c0a13a9e9970a012ca727148aa0ac148d50dd",
-                "reference": "314c0a13a9e9970a012ca727148aa0ac148d50dd",
+                "url": "https://api.github.com/repos/studer-raimann/DIC/zipball/de8dd1ff734ba8dc42178180dcdaee20058c10aa",
+                "reference": "de8dd1ff734ba8dc42178180dcdaee20058c10aa",
                 "shasum": ""
             },
             "require": {
@@ -238,7 +238,7 @@
                 "globals",
                 "trait"
             ],
-            "time": "2020-11-13T09:09:28+00:00"
+            "time": "2020-11-25T11:02:47+00:00"
         },
         {
             "name": "srag/generateplugininfoshelper",

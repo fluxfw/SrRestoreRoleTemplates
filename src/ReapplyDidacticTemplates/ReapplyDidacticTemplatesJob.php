@@ -7,6 +7,7 @@ use ilCronJobResult;
 use ilCronManager;
 use ilObject;
 use ilSrRestoreRoleTemplatesPlugin;
+use srag\DIC\SrRestoreRoleTemplates\Cron\FixUITemplateInCronContext;
 use srag\DIC\SrRestoreRoleTemplates\DICTrait;
 use srag\Plugins\SrRestoreRoleTemplates\Utils\SrRestoreRoleTemplatesTrait;
 
@@ -21,6 +22,7 @@ class ReapplyDidacticTemplatesJob extends ilCronJob
 {
 
     use DICTrait;
+    use FixUITemplateInCronContext;
     use SrRestoreRoleTemplatesTrait;
 
     const CRON_JOB_ID = ilSrRestoreRoleTemplatesPlugin::PLUGIN_ID . "_reapply_didactic_templates";
@@ -111,6 +113,8 @@ class ReapplyDidacticTemplatesJob extends ilCronJob
      */
     public function run() : ilCronJobResult
     {
+        self::fixUITemplateInCronContext();
+
         $result = new ilCronJobResult();
 
         $count_templates = 0;
