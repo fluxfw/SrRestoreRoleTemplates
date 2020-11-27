@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.1.7]
+- Update readme
+
 ## [2.1.6]
 - Update readme
 
