@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "605aa6f1a34651db0843bb3d85468aef",
+    "content-hash": "0385fb885e78d4cb6e91e29f7c134df1",
     "packages": [
         {
             "name": "srag/activerecordconfig",
@@ -242,16 +242,16 @@
         },
         {
             "name": "srag/generateplugininfoshelper",
-            "version": "2.4.5",
+            "version": "2.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/studer-raimann/GeneratePluginInfosHelper.git",
-                "reference": "cb928c61cd60d1d62afe71c368bfed06833bfa85"
+                "reference": "c27b765782c9533f6f6f67e2b1a705f52df377a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/studer-raimann/GeneratePluginInfosHelper/zipball/cb928c61cd60d1d62afe71c368bfed06833bfa85",
-                "reference": "cb928c61cd60d1d62afe71c368bfed06833bfa85",
+                "url": "https://api.github.com/repos/studer-raimann/GeneratePluginInfosHelper/zipball/c27b765782c9533f6f6f67e2b1a705f52df377a1",
+                "reference": "c27b765782c9533f6f6f67e2b1a705f52df377a1",
                 "shasum": ""
             },
             "require": {
@@ -263,7 +263,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "srag\\GeneratePluginInfosHelper\\SrRestoreRoleTemplates\\": "src/"
+                    "srag\\GeneratePluginInfosHelper\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -278,7 +278,7 @@
                     "role": "Developer"
                 }
             ],
-            "description": "Generate plugin infos helper",
+            "description": "Automatic generate plugin infos such README.md, plugin.php, plugin.xml, ... from composer.json",
             "homepage": "https://github.com/studer-raimann/GeneratePluginInfosHelper",
             "keywords": [
                 "Infos",
@@ -286,7 +286,7 @@
                 "helper",
                 "plugin"
             ],
-            "time": "2020-11-12T14:15:19+00:00"
+            "time": "2020-11-30T14:15:16+00:00"
         },
         {
             "name": "srag/librariesnamespacechanger",
