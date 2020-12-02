@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.1.8]
+- Fix missing tpl ui in cron context used in some core object constructor
+
 ## [2.1.7]
 - Update readme
 
