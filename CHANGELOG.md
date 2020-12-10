@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.1.9]
+- Fix missing tpl ui index in cron context
+
 ## [2.1.8]
 - Fix missing tpl ui in cron context used in some core object constructor
 
