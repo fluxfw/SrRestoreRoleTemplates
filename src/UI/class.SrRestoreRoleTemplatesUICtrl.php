@@ -116,7 +116,7 @@ class SrRestoreRoleTemplatesUICtrl
      */
     protected function back()/* : void*/
     {
-        self::dic()->ctrl()->redirectToURL(ilLink::_getLink($this->obj_ref_id));
+        self::dic()->ctrl()->redirectToURL(ilLink::_getLink($this->obj->getRefId()));
     }
 
 
