@@ -8,7 +8,6 @@ class ComposerStaticInit8cf1720199af972954ebf6a3269191f8
 {
     public static $files = array (
         'e744f461f71a321daeb865c0b2aac7e8' => __DIR__ . '/..' . '/srag/dic/src/PHPVersionChecker.php',
-        '501642243a556460b9f375e2678ab4e3' => __DIR__ . '/..' . '/srag/dic/src/Ilias7PreWarn.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -142,7 +141,6 @@ class ComposerStaticInit8cf1720199af972954ebf6a3269191f8
         'srag\\DIC\\SrRestoreRoleTemplates\\Database\\PdoContextHelper' => __DIR__ . '/..' . '/srag/dic/src/Database/PdoContextHelper.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\Database\\PdoStatementContextHelper' => __DIR__ . '/..' . '/srag/dic/src/Database/PdoStatementContextHelper.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\Exception\\DICException' => __DIR__ . '/..' . '/srag/dic/src/Exception/DICException.php',
-        'srag\\DIC\\SrRestoreRoleTemplates\\Ilias7PreWarn' => __DIR__ . '/..' . '/srag/dic/src/Ilias7PreWarn.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\Loader\\AbstractLoaderDetector' => __DIR__ . '/..' . '/srag/dic/src/Loader/AbstractLoaderDetector.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\Output\\Output' => __DIR__ . '/..' . '/srag/dic/src/Output/Output.php',
         'srag\\DIC\\SrRestoreRoleTemplates\\Output\\OutputInterface' => __DIR__ . '/..' . '/srag/dic/src/Output/OutputInterface.php',
