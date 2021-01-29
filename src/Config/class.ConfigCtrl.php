@@ -2,6 +2,8 @@
 
 namespace srag\Plugins\SrRestoreRoleTemplates\Config;
 
+require_once __DIR__ . "/../../vendor/autoload.php";
+
 use ilSrRestoreRoleTemplatesPlugin;
 use ilUtil;
 use srag\DIC\SrRestoreRoleTemplates\DICTrait;
