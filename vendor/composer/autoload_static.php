@@ -164,6 +164,8 @@ class ComposerStaticInit8cf1720199af972954ebf6a3269191f8
         'srag\\Plugins\\SrRestoreRoleTemplates\\Config\\Repository' => __DIR__ . '/../..' . '/src/Config/Repository.php',
         'srag\\Plugins\\SrRestoreRoleTemplates\\Job\\Factory' => __DIR__ . '/../..' . '/src/Job/Factory.php',
         'srag\\Plugins\\SrRestoreRoleTemplates\\Job\\Repository' => __DIR__ . '/../..' . '/src/Job/Repository.php',
+        'srag\\Plugins\\SrRestoreRoleTemplates\\Object\\Factory' => __DIR__ . '/../..' . '/src/Object/Factory.php',
+        'srag\\Plugins\\SrRestoreRoleTemplates\\Object\\Repository' => __DIR__ . '/../..' . '/src/Object/Repository.php',
         'srag\\Plugins\\SrRestoreRoleTemplates\\ReapplyDidacticTemplates\\Factory' => __DIR__ . '/../..' . '/src/ReapplyDidacticTemplates/Factory.php',
         'srag\\Plugins\\SrRestoreRoleTemplates\\ReapplyDidacticTemplates\\ReapplyDidacticTemplatesJob' => __DIR__ . '/../..' . '/src/ReapplyDidacticTemplates/ReapplyDidacticTemplatesJob.php',
         'srag\\Plugins\\SrRestoreRoleTemplates\\ReapplyDidacticTemplates\\Repository' => __DIR__ . '/../..' . '/src/ReapplyDidacticTemplates/Repository.php',

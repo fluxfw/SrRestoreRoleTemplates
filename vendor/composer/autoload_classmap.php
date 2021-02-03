@@ -105,6 +105,8 @@ return array(
     'srag\\Plugins\\SrRestoreRoleTemplates\\Config\\Repository' => $baseDir . '/src/Config/Repository.php',
     'srag\\Plugins\\SrRestoreRoleTemplates\\Job\\Factory' => $baseDir . '/src/Job/Factory.php',
     'srag\\Plugins\\SrRestoreRoleTemplates\\Job\\Repository' => $baseDir . '/src/Job/Repository.php',
+    'srag\\Plugins\\SrRestoreRoleTemplates\\Object\\Factory' => $baseDir . '/src/Object/Factory.php',
+    'srag\\Plugins\\SrRestoreRoleTemplates\\Object\\Repository' => $baseDir . '/src/Object/Repository.php',
     'srag\\Plugins\\SrRestoreRoleTemplates\\ReapplyDidacticTemplates\\Factory' => $baseDir . '/src/ReapplyDidacticTemplates/Factory.php',
     'srag\\Plugins\\SrRestoreRoleTemplates\\ReapplyDidacticTemplates\\ReapplyDidacticTemplatesJob' => $baseDir . '/src/ReapplyDidacticTemplates/ReapplyDidacticTemplatesJob.php',
     'srag\\Plugins\\SrRestoreRoleTemplates\\ReapplyDidacticTemplates\\Repository' => $baseDir . '/src/ReapplyDidacticTemplates/Repository.php',

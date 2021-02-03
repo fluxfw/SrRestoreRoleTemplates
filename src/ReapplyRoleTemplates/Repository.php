@@ -4,7 +4,6 @@ namespace srag\Plugins\SrRestoreRoleTemplates\ReapplyRoleTemplates;
 
 use ilDBConstants;
 use ilObject;
-use ilObjectFactory;
 use ilObjRole;
 use ilSrRestoreRoleTemplatesPlugin;
 use srag\DIC\SrRestoreRoleTemplates\DICTrait;
@@ -98,8 +97,25 @@ ORDER BY last_update DESC';
         $result = self::dic()->database()->queryF($query, $types, $values);
 
         return array_map(function (array $object) : ilObject {
-            return ilObjectFactory::getInstanceByRefId($object["ref_id"], false);
+            return self::srRestoreRoleTemplates()->objects()->getObjectByRefId($object["ref_id"]);
         }, self::dic()->database()->fetchAll($result));
+    }
+
+
+    /**
+     * @param ilObject $obj
+     *
+     * @return bool
+     */
+    public function hasRoleTemplateChanges(ilObject $obj) : bool
+    {
+        foreach (self::srRestoreRoleTemplates()->objects()->getObjectDefaultRoles($obj) as $obj_role_title => $obj_role_id) {
+            if ($this->hasRoleTemplateChange($obj, $obj_role_id, self::srRestoreRoleTemplates()->objects()->getRoleTemplateIdFromObject($obj_role_title))) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
 
@@ -121,9 +137,10 @@ ORDER BY last_update DESC';
     {
         $count = 0;
 
-        foreach ((array) $obj->getDefaultCourseRoles() as $obj_role_title => $obj_role_id) {
-            $this->reapplyRoleTemplate($obj, $obj_role_id, current(ilObjRole::_getIdsForTitle("il_" . preg_replace("/_role$/", "", $obj_role_title), "rolt")));
-            $count++;
+        foreach (self::srRestoreRoleTemplates()->objects()->getObjectDefaultRoles($obj) as $obj_role_title => $obj_role_id) {
+            if ($this->reapplyRoleTemplate($obj, $obj_role_id, self::srRestoreRoleTemplates()->objects()->getRoleTemplateIdFromObject($obj_role_title))) {
+                $count++;
+            }
         }
 
         return $count;
@@ -134,9 +151,28 @@ ORDER BY last_update DESC';
      * @param ilObject $obj
      * @param int      $obj_role_id
      * @param int      $role_template_id
+     *
+     * @return bool
      */
-    protected function reapplyRoleTemplate(ilObject $obj, int $obj_role_id, int $role_template_id)/*:void*/
+    protected function hasRoleTemplateChange(ilObject $obj, int $obj_role_id, int $role_template_id) : bool
     {
+        return true; // TODO:
+    }
+
+
+    /**
+     * @param ilObject $obj
+     * @param int      $obj_role_id
+     * @param int      $role_template_id
+     *
+     * @return bool
+     */
+    protected function reapplyRoleTemplate(ilObject $obj, int $obj_role_id, int $role_template_id) : bool
+    {
+        if (!$this->hasRoleTemplateChange($obj, $obj_role_id, $role_template_id)) {
+            return false;
+        }
+
         self::dic()
             ->rbac()
             ->admin()
@@ -144,5 +180,7 @@ ORDER BY last_update DESC';
                 false);
 
         (new ilObjRole($obj_role_id))->changeExistingObjects($obj->getRefId(), ilObjRole::MODE_PROTECTED_KEEP_LOCAL_POLICIES, ["all"]);
+
+        return true;
     }
 }

@@ -6,6 +6,7 @@ use ilSrRestoreRoleTemplatesPlugin;
 use srag\DIC\SrRestoreRoleTemplates\DICTrait;
 use srag\Plugins\SrRestoreRoleTemplates\Config\Repository as ConfigRepository;
 use srag\Plugins\SrRestoreRoleTemplates\Job\Repository as JobsRepository;
+use srag\Plugins\SrRestoreRoleTemplates\Object\Repository as ObjectsRepository;
 use srag\Plugins\SrRestoreRoleTemplates\ReapplyDidacticTemplates\Repository as ReapplyDidacticTemplatesRepository;
 use srag\Plugins\SrRestoreRoleTemplates\ReapplyRoleTemplates\Repository as ReapplyRoleTemplatesRepository;
 use srag\Plugins\SrRestoreRoleTemplates\Utils\SrRestoreRoleTemplatesTrait;
@@ -68,6 +69,7 @@ final class Repository
     {
         $this->config()->dropTables();
         $this->jobs()->dropTables();
+        $this->objects()->dropTables();
         $this->reapplyDidacticTemplates()->dropTables();
         $this->reapplyRoleTemplates()->dropTables();
     }
@@ -92,6 +94,7 @@ final class Repository
     {
         $this->config()->installTables();
         $this->jobs()->installTables();
+        $this->objects()->installTables();
         $this->reapplyDidacticTemplates()->installTables();
         $this->reapplyRoleTemplates()->installTables();
     }
@@ -103,6 +106,15 @@ final class Repository
     public function jobs() : JobsRepository
     {
         return JobsRepository::getInstance();
+    }
+
+
+    /**
+     * @return ObjectsRepository
+     */
+    public function objects() : ObjectsRepository
+    {
+        return ObjectsRepository::getInstance();
     }
 
 

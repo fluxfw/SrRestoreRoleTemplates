@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.1.11]
+- Add some cache for possible speed up
+
 ## [2.1.10]
 - Fix courses without roles
 
