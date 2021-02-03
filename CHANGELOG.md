@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.1.10]
+- Fix courses without roles
+
 ## [2.1.9]
 - Fix missing tpl ui index in cron context
 

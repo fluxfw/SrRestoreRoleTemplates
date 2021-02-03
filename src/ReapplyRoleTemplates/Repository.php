@@ -121,7 +121,7 @@ ORDER BY last_update DESC';
     {
         $count = 0;
 
-        foreach ($obj->getDefaultCourseRoles() as $obj_role_title => $obj_role_id) {
+        foreach ((array) $obj->getDefaultCourseRoles() as $obj_role_title => $obj_role_id) {
             $this->reapplyRoleTemplate($obj, $obj_role_id, current(ilObjRole::_getIdsForTitle("il_" . preg_replace("/_role$/", "", $obj_role_title), "rolt")));
             $count++;
         }
