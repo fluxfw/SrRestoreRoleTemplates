@@ -2,6 +2,8 @@
 
 namespace srag\Plugins\SrRestoreRoleTemplates\UI;
 
+require_once __DIR__ . "/../../vendor/autoload.php";
+
 use ilLink;
 use ilObject;
 use ilObjectFactory;
@@ -116,7 +118,7 @@ class SrRestoreRoleTemplatesUICtrl
      */
     protected function back()/* : void*/
     {
-        self::dic()->ctrl()->redirectToURL(ilLink::_getLink($this->obj_ref_id));
+        self::dic()->ctrl()->redirectToURL(ilLink::_getLink($this->obj->getRefId()));
     }
 
 

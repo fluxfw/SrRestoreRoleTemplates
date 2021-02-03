@@ -1,21 +1,25 @@
 {
   "name": "srag/srrestoreroletemplates",
   "description": "Automatic reapply didactic or role templates to objects",
-  "version": "2.1.9",
+  "version": "2.1.10",
   "extra": {
     "ilias_plugin": {
       "id": "srresroltem",
       "name": "SrRestoreRoleTemplates",
       "ilias_min_version": "5.4.0",
       "ilias_max_version": "6.999",
-      "slot": "Services/Cron/CronHook"
+      "slot": "Services/Cron/CronHook",
+      "supports_cli_setup": true
     },
-    "generate_plugin_readme_template": "SRAG_ILIAS_PLUGIN"
+    "generate_plugin_readme_template": "SRAG_ILIAS_PLUGIN",
+    "long_description_template": "src/LONG_DESCRIPTION.md"
   },
   "type": "project",
   "keywords": [
-    "ILIAS",
-    "Plugin"
+    "cron",
+    "ilias",
+    "job",
+    "plugin"
   ],
   "homepage": "https://github.com/studer-raimann/SrRestoreRoleTemplates",
   "license": "GPL-3.0-only",
@@ -50,8 +54,7 @@
       "src/UI/class.SrRestoreRoleTemplatesUICtrl.php"
     ],
     "files": [
-      "vendor/srag/dic/src/PHPVersionChecker.php",
-      "vendor/srag/dic/src/Ilias7PreWarn.php"
+      "vendor/srag/dic/src/PHPVersionChecker.php"
     ]
   },
   "config": {
