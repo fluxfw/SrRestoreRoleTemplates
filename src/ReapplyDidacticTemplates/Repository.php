@@ -3,9 +3,7 @@
 namespace srag\Plugins\SrRestoreRoleTemplates\ReapplyDidacticTemplates;
 
 use ilDBConstants;
-use ilDidacticTemplateObjSettings;
 use ilObject;
-use ilObjectFactory;
 use ilObjectPlugin;
 use ilSrRestoreRoleTemplatesPlugin;
 use srag\DIC\SrRestoreRoleTemplates\DICTrait;
@@ -97,7 +95,7 @@ ORDER BY last_update DESC';
         $result = self::dic()->database()->queryF($query, $types, $values);
 
         return array_map(function (array $object) : ilObject {
-            return ilObjectFactory::getInstanceByRefId($object["ref_id"], false);
+            return self::srRestoreRoleTemplates()->objects()->getObjectByRefId($object["ref_id"]);
         }, array_filter(self::dic()->database()->fetchAll($result), function (array $object) : bool {
             if (self::dic()->objDefinition()->isPluginTypeName($object["type"])) {
                 $plugin_object = ilObjectPlugin::getPluginObjectByType($object["type"]);
@@ -111,6 +109,23 @@ ORDER BY last_update DESC';
                 return true;
             }
         }));
+    }
+
+
+    /**
+     * @param ilObject $obj
+     *
+     * @return bool
+     */
+    public function hasDidacticTemplateChanges(ilObject $obj) : bool
+    {
+        $tpl_id = self::srRestoreRoleTemplates()->objects()->getDidacticTemplateIdFromObject($obj->getRefId());
+
+        if (empty($tpl_id)) {
+            return false;
+        }
+
+        return $this->hasDidacticTemplateChange($obj, $tpl_id);
     }
 
 
@@ -130,25 +145,42 @@ ORDER BY last_update DESC';
      */
     public function reapplyDidacticTemplates(ilObject $obj) : int
     {
-        $tpl_id = $this->getDidacticTemplateIdFromObject($obj->getRefId());
+        $tpl_id = self::srRestoreRoleTemplates()->objects()->getDidacticTemplateIdFromObject($obj->getRefId());
 
         if (empty($tpl_id)) {
             return 0;
         }
 
-        $obj->applyDidacticTemplate($tpl_id);
-
-        return 1;
+        return $this->reapplyDidacticTemplate($obj, $tpl_id);
     }
 
 
     /**
-     * @param int $obj_ref_id
+     * @param ilObject $obj
+     * @param int      $tpl_id
      *
-     * @return int|null
+     * @return bool
      */
-    protected function getDidacticTemplateIdFromObject(int $obj_ref_id)/*:?int*/
+    protected function hasDidacticTemplateChange(ilObject $obj, int $tpl_id) : bool
     {
-        return ilDidacticTemplateObjSettings::lookupTemplateId($obj_ref_id);
+        return true; // TODO:
+    }
+
+
+    /**
+     * @param ilObject $obj
+     * @param int      $tpl_id
+     *
+     * @return bool
+     */
+    protected function reapplyDidacticTemplate(ilObject $obj, int $tpl_id) : bool
+    {
+        if (!$this->hasDidacticTemplateChange($obj, $tpl_id)) {
+            return false;
+        }
+
+        $obj->applyDidacticTemplate($tpl_id);
+
+        return true;
     }
 }

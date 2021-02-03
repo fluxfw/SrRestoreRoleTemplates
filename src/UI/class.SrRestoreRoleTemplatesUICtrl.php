@@ -6,7 +6,6 @@ require_once __DIR__ . "/../../vendor/autoload.php";
 
 use ilLink;
 use ilObject;
-use ilObjectFactory;
 use ilSrRestoreRoleTemplatesPlugin;
 use ilUIPluginRouterGUI;
 use ilUtil;
@@ -85,7 +84,7 @@ class SrRestoreRoleTemplatesUICtrl
             die();
         }
 
-        $this->obj = ilObjectFactory::getInstanceByRefId($this->obj_ref_id, false);
+        $this->obj = self::srRestoreRoleTemplates()->objects()->getObjectByRefId($this->obj_ref_id);
 
         self::dic()->ctrl()->saveParameter($this, self::GET_PARAM_REF_ID);
 
@@ -100,9 +99,12 @@ class SrRestoreRoleTemplatesUICtrl
                 switch ($cmd) {
                     case self::CMD_BACK:
                     case self::CMD_LIST_RESTORE_TEMPLATES:
+                        $this->{$cmd}();
+                        break;
+
                     case self::CMD_REAPPLY_DIDACTIC_TEMPLATES:
                     case self::CMD_REAPPLY_ROLE_TEMPLATES:
-                        $this->{$cmd}();
+                        $this->runRestore(self::srRestoreRoleTemplates()->{$cmd});
                         break;
 
                     default:
@@ -140,30 +142,11 @@ class SrRestoreRoleTemplatesUICtrl
 
 
     /**
-     *
+     * @param object $repository
      */
-    protected function reapplyDidacticTemplates()/* : void*/
+    protected function runRestore(/*object*/ $repository)/* : void*/
     {
-        $result_count = self::srRestoreRoleTemplates()->reapplyDidacticTemplates()->factory()->newJobInstance([
-            $this->obj
-        ])->run()->getMessage();
-
-        ilUtil::sendInfo($result_count, true);
-
-        self::dic()->ctrl()->redirect($this, self::CMD_LIST_RESTORE_TEMPLATES);
-    }
-
-
-    /**
-     *
-     */
-    protected function reapplyRoleTemplates()/* : void*/
-    {
-        if (!in_array($this->obj->getType(), Repository::OBJECT_TYPES)) {
-            die();
-        }
-
-        $result_count = self::srRestoreRoleTemplates()->reapplyRoleTemplates()->factory()->newJobInstance([
+        $result_count = $repository->factory()->newJobInstance([
             $this->obj
         ])->run()->getMessage();
 
