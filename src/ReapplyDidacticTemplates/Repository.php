@@ -151,7 +151,11 @@ ORDER BY last_update DESC';
             return 0;
         }
 
-        return $this->reapplyDidacticTemplate($obj, $tpl_id);
+        if ($this->reapplyDidacticTemplate($obj, $tpl_id)) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 
 
