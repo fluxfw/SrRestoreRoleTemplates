@@ -104,7 +104,7 @@ class SrRestoreRoleTemplatesUICtrl
 
                     case self::CMD_REAPPLY_DIDACTIC_TEMPLATES:
                     case self::CMD_REAPPLY_ROLE_TEMPLATES:
-                        $this->runRestore(self::srRestoreRoleTemplates()->{$cmd});
+                        $this->runRestore(self::srRestoreRoleTemplates()->{$cmd}());
                         break;
 
                     default:
