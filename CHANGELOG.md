@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.1.12]
+- Fix restore from ui
+
 ## [2.1.11]
 - Add some cache for possible speed up
 
