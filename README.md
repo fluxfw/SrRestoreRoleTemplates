@@ -20,7 +20,7 @@ Start at your ILIAS root directory
 ```bash
 mkdir -p Customizing/global/plugins/Services/Cron/CronHook
 cd Customizing/global/plugins/Services/Cron/CronHook
-git clone https://github.com/studer-raimann/SrRestoreRoleTemplates.git SrRestoreRoleTemplates
+git clone https://github.com/fluxfw/SrRestoreRoleTemplates.git SrRestoreRoleTemplates
 ```
 
 Update, activate and config the plugin in the ILIAS Plugin Administration
