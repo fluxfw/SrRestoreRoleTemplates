@@ -1,7 +1,7 @@
 {
   "name": "srag/srrestoreroletemplates",
   "description": "Automatic reapply didactic or role templates to objects",
-  "version": "2.1.12",
+  "version": "2.1.13",
   "extra": {
     "ilias_plugin": {
       "id": "srresroltem",
@@ -21,7 +21,7 @@
     "job",
     "plugin"
   ],
-  "homepage": "https://github.com/studer-raimann/SrRestoreRoleTemplates",
+  "homepage": "https://github.com/fluxfw/SrRestoreRoleTemplates",
   "license": "GPL-3.0-only",
   "authors": [
     {
