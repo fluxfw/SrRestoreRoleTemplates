@@ -17,8 +17,6 @@ use srag\DIC\SrRestoreRoleTemplates\DICTrait;
  *
  * @package           srag\RemovePluginDataConfirm\SrRestoreRoleTemplates
  *
- * @author            studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
- *
  * @ilCtrl_isCalledBy srag\RemovePluginDataConfirm\SrRestoreRoleTemplates\RemovePluginDataConfirmCtrl: ilUIPluginRouterGUI
  */
 class RemovePluginDataConfirmCtrl

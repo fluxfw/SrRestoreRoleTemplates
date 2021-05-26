@@ -14,8 +14,6 @@ use srag\Plugins\SrRestoreRoleTemplates\Utils\SrRestoreRoleTemplatesTrait;
  * Class ReapplyRoleTemplatesJob
  *
  * @package srag\Plugins\SrRestoreRoleTemplates\ReapplyRoleTemplates
- *
- * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
 class ReapplyRoleTemplatesJob extends ilCronJob
 {

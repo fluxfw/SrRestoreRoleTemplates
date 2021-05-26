@@ -24,8 +24,6 @@ use Throwable;
  *
  * @package      srag\CustomInputGUIs\SrRestoreRoleTemplates\FormBuilder
  *
- * @author       studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
- *
  * @ilCtrl_Calls srag\CustomInputGUIs\SrRestoreRoleTemplates\FormBuilder\AbstractFormBuilder: ilFormPropertyDispatchGUI
  */
 abstract class AbstractFormBuilder implements FormBuilder

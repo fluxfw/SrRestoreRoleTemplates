@@ -16,8 +16,6 @@ use srag\DIC\SrRestoreRoleTemplates\Exception\DICException;
  * Class Plugin
  *
  * @package srag\DIC\SrRestoreRoleTemplates\Plugin
- *
- * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
 final class Plugin implements PluginInterface
 {

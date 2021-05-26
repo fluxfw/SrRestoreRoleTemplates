@@ -4,8 +4,6 @@
 
 Automatic reapply didactic or role templates to objects
 
-This is an OpenSource project by studer + raimann ag, CH-Burgdorf (https://studer-raimann.ch)
-
 This project is licensed under the GPL-3.0-only license
 
 ## Requirements
@@ -20,7 +18,7 @@ Start at your ILIAS root directory
 ```bash
 mkdir -p Customizing/global/plugins/Services/Cron/CronHook
 cd Customizing/global/plugins/Services/Cron/CronHook
-git clone https://github.com/fluxfw/SrRestoreRoleTemplates.git SrRestoreRoleTemplates
+git clone https://github.com/fluxapps/SrRestoreRoleTemplates.git SrRestoreRoleTemplates
 ```
 
 Update, activate and config the plugin in the ILIAS Plugin Administration
@@ -48,4 +46,4 @@ You can configure a date to skip very old objects
 
 ### Per object
 
-You can also run the jobs manually per object by using the [SrRestoreRoleTemplatesUI](https://github.com/studer-raimann/SrRestoreRoleTemplatesUI) plugin
+You can also run the jobs manually per object by using the [SrRestoreRoleTemplatesUI](https://github.com/fluxapps/SrRestoreRoleTemplatesUI) plugin

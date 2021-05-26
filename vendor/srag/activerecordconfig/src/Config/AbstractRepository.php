@@ -11,8 +11,6 @@ use srag\DIC\SrRestoreRoleTemplates\DICTrait;
  * Class AbstractRepository
  *
  * @package srag\ActiveRecordConfig\SrRestoreRoleTemplates\Config
- *
- * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
 abstract class AbstractRepository
 {

@@ -17,8 +17,6 @@ use srag\DIC\SrRestoreRoleTemplates\Loader\AbstractLoaderDetector;
  * Class CustomInputGUIsLoaderDetector
  *
  * @package srag\CustomInputGUIs\SrRestoreRoleTemplates\Loader
- *
- * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
 class CustomInputGUIsLoaderDetector extends AbstractLoaderDetector
 {
