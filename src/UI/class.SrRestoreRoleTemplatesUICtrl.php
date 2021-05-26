@@ -20,8 +20,6 @@ use srag\Plugins\SrRestoreRoleTemplates\Utils\SrRestoreRoleTemplatesTrait;
  *
  * @package           srag\Plugins\SrRestoreRoleTemplates\UI
  *
- * @author            studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
- *
  * @ilCtrl_isCalledBy srag\Plugins\SrRestoreRoleTemplates\UI\SrRestoreRoleTemplatesUICtrl: ilUIPluginRouterGUI
  */
 class SrRestoreRoleTemplatesUICtrl

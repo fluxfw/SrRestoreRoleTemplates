@@ -14,8 +14,6 @@ use srag\Plugins\SrRestoreRoleTemplates\Utils\SrRestoreRoleTemplatesTrait;
  *
  * @package           srag\Plugins\SrRestoreRoleTemplates\Config
  *
- * @author            studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
- *
  * @ilCtrl_isCalledBy srag\Plugins\SrRestoreRoleTemplates\Config\ConfigCtrl: ilSrRestoreRoleTemplatesConfigGUI
  */
 class ConfigCtrl

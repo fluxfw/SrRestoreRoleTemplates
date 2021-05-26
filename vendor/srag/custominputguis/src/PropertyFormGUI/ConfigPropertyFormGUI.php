@@ -9,8 +9,6 @@ use srag\CustomInputGUIs\SrRestoreRoleTemplates\PropertyFormGUI\Exception\Proper
  *
  * @package    srag\CustomInputGUIs\SrRestoreRoleTemplates\PropertyFormGUI
  *
- * @author     studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
- *
  * @deprecated Please use PropertyFormGUI instead
  */
 abstract class ConfigPropertyFormGUI extends PropertyFormGUI

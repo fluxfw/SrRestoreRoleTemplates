@@ -19,4 +19,4 @@ You can configure a date to skip very old objects
 
 ### Per object
 
-You can also run the jobs manually per object by using the [SrRestoreRoleTemplatesUI](https://github.com/studer-raimann/SrRestoreRoleTemplatesUI) plugin
+You can also run the jobs manually per object by using the [SrRestoreRoleTemplatesUI](https://github.com/fluxapps/SrRestoreRoleTemplatesUI) plugin
