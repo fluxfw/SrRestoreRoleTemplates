@@ -11,6 +11,7 @@ use ilPropertyFormGUI;
 use ilRadioOption;
 use ilRepositorySelector2InputGUI;
 use ilUtil;
+use srag\CustomInputGUIs\SrRestoreRoleTemplates\HiddenInputGUI\HiddenInputGUI;
 use srag\CustomInputGUIs\SrRestoreRoleTemplates\MultiLineInputGUI\MultiLineInputGUI;
 use srag\CustomInputGUIs\SrRestoreRoleTemplates\PropertyFormGUI\Exception\PropertyFormGUIException;
 use srag\CustomInputGUIs\SrRestoreRoleTemplates\PropertyFormGUI\PropertyFormGUI;
@@ -232,6 +233,10 @@ final class Items
         $input_tpl->setCurrentBlock("input");
 
         foreach ($inputs as $input) {
+            if ($input instanceof HiddenInputGUI) {
+                $input_tpl->setVariableEscaped("HIDDEN", " hidden");
+            }
+
             $input_tpl->setVariableEscaped("TITLE", $input->getTitle());
 
             if ($input->getRequired()) {
