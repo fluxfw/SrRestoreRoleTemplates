@@ -58,7 +58,7 @@ class SrRestoreRoleTemplatesUICtrl
     /**
      * @param int $obj_ref_id
      */
-    public static function addTabs(int $obj_ref_id)/* : void*/
+    public static function addTabs(int $obj_ref_id) : void
     {
         if (self::srRestoreRoleTemplates()->hasAccess(self::dic()->user()->getId(), $obj_ref_id)) {
             self::dic()->ctrl()->setParameterByClass(self::class, self::GET_PARAM_REF_ID, $obj_ref_id);
@@ -74,7 +74,7 @@ class SrRestoreRoleTemplatesUICtrl
     /**
      *
      */
-    public function executeCommand()/* : void*/
+    public function executeCommand() : void
     {
         $this->obj_ref_id = intval(filter_input(INPUT_GET, self::GET_PARAM_REF_ID));
 
@@ -116,7 +116,7 @@ class SrRestoreRoleTemplatesUICtrl
     /**
      *
      */
-    protected function back()/* : void*/
+    protected function back() : void
     {
         self::dic()->ctrl()->redirectToURL(ilLink::_getLink($this->obj->getRefId()));
     }
@@ -125,7 +125,7 @@ class SrRestoreRoleTemplatesUICtrl
     /**
      *
      */
-    protected function listRestoreTemplates()/* : void*/
+    protected function listRestoreTemplates() : void
     {
         self::dic()->toolbar()->addComponent(self::dic()->ui()->factory()->button()->standard(self::plugin()->translate("title", ReapplyDidacticTemplatesJob::LANG_MODULE),
             str_replace("\\", "\\\\", self::dic()->ctrl()->getLinkTarget($this, self::CMD_REAPPLY_DIDACTIC_TEMPLATES))));
@@ -142,7 +142,7 @@ class SrRestoreRoleTemplatesUICtrl
     /**
      * @param object $repository
      */
-    protected function runRestore(/*object*/ $repository)/* : void*/
+    protected function runRestore(/*object*/ $repository) : void
     {
         $result_count = $repository->factory()->newJobInstance([
             $this->obj
@@ -157,7 +157,7 @@ class SrRestoreRoleTemplatesUICtrl
     /**
      *
      */
-    protected function setTabs()/* : void*/
+    protected function setTabs() : void
     {
         self::dic()->tabs()->clearTargets();
 

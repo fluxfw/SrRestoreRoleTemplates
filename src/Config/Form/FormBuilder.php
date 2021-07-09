@@ -85,7 +85,7 @@ class FormBuilder extends AbstractFormBuilder
     /**
      * @inheritDoc
      */
-    protected function storeData(array $data)/* : void*/
+    protected function storeData(array $data) : void
     {
         self::srRestoreRoleTemplates()->config()->setValue(self::KEY_ONLY_OBJECTS_FROM, strval($data[self::KEY_ONLY_OBJECTS_FROM]));
     }
