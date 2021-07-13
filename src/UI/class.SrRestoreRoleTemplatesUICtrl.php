@@ -142,7 +142,7 @@ class SrRestoreRoleTemplatesUICtrl
     /**
      * @param object $repository
      */
-    protected function runRestore(/*object*/ $repository) : void
+    protected function runRestore(object $repository) : void
     {
         $result_count = $repository->factory()->newJobInstance([
             $this->obj
