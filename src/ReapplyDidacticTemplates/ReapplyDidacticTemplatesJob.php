@@ -55,7 +55,7 @@ class ReapplyDidacticTemplatesJob extends ilCronJob
     /**
      * @inheritDoc
      */
-    public function getDefaultScheduleValue()/*:?int*/
+    public function getDefaultScheduleValue() : ?int
     {
         return null;
     }

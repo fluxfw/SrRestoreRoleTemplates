@@ -53,7 +53,7 @@ final class Repository
     /**
      * @internal
      */
-    public function dropTables()/*: void*/
+    public function dropTables() : void
     {
 
     }
@@ -130,7 +130,7 @@ ORDER BY last_update DESC';
     /**
      * @internal
      */
-    public function installTables()/*: void*/
+    public function installTables() : void
     {
 
     }
