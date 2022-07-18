@@ -10,7 +10,6 @@ return array(
     'srag\\Plugins\\SrRestoreRoleTemplates\\' => array($baseDir . '/src'),
     'srag\\LibraryLanguageInstaller\\SrRestoreRoleTemplates\\' => array($vendorDir . '/srag/librarylanguageinstaller/src'),
     'srag\\LibrariesNamespaceChanger\\' => array($vendorDir . '/srag/librariesnamespacechanger/src'),
-    'srag\\GeneratePluginInfosHelper\\SrRestoreRoleTemplates\\' => array($vendorDir . '/srag/generateplugininfoshelper/src'),
     'srag\\DevTools\\SrRestoreRoleTemplates\\' => array($vendorDir . '/srag/devtools/src'),
     'srag\\DIC\\SrRestoreRoleTemplates\\' => array($vendorDir . '/srag/dic/src'),
     'srag\\CustomInputGUIs\\SrRestoreRoleTemplates\\' => array($vendorDir . '/srag/custominputguis/src'),
